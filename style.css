@@ -165,6 +165,11 @@ p {
 
 footer .glyphicon {
     font-size: 20px;
-    margin-bottom: 20px;
-    color: #f4511e;
+    margin-bottom: 0px;
+    color: white;
+}
+
+footer #small {
+	font-size: 10px;
+	margin-bottom: 20px;
 }
