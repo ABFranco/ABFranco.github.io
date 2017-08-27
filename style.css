@@ -160,3 +160,11 @@ p {
 	background-color: white;
 	border-color: white;
 }
+
+/* --------footer---------- */
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
