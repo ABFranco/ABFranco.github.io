@@ -1,0 +1,162 @@
+/* everything */
+
+body {
+	background: #3E4649;
+	color: #f7f7f7;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 40px;
+
+}
+
+h1,h2 {
+	font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 16px;
+	color: #cdcdcd;
+}
+
+
+
+
+/* -----------navigation bar -------------*/
+
+.navbar {
+	margin-bottom: 0;
+	opacity: 50%;
+}
+
+#menu{
+  position:fixed;
+  z-index: 9999;
+  top:0;
+  width: 100%;
+}
+
+/* --------jumbotron--------- */
+
+.jumbotron {
+	background: SlateBlue;
+	color: white;
+	text-align: center;
+	padding-top: 60px;
+    margin-top: -40px;
+}
+.jumbotron p {
+	color: white;
+	font-size: 26px;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+.btn-primary:hover {
+	color: SlateBlue;
+	background-color: white;
+	border-color: white;
+}
+
+/* -------picture section-------- */
+.self_pic {
+	margin-left: auto;
+  	margin-right: auto;
+	width: 1024px;
+}
+
+.picture_row {
+	float:left;
+	margin-left: 100px;
+	width: 250px;
+	
+}
+
+.picture_text {
+	float:left;
+	font-size: 20px;
+	margin-left: 25px;
+}
+
+
+/* -----------about me---------- */
+.section_title {
+	color: SlateBlue;
+}
+.buttons{
+	clear:left;
+}
+
+#about .row {
+	border-radius: 10px;
+	background-color: SlateBlue;
+	padding: 20px; 
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#about {
+	padding-top: 50px;
+	text-align: center;
+}
+
+#about p {
+	margin-bottom: 30px;
+	font-family: sans-serif;
+}
+
+.glyphicon-large {
+	font-size: 100px;
+}
+
+/* -----------contact---------- */
+
+#contact {
+	width: 900px;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+#contact .row {
+	padding: 20px; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#contact #border {
+	border-radius: 50px;
+	border-style: solid;
+	border-width: 5px;
+}
+
+#contact h2, h3, p {
+	text-align: center;
+}
+
+#message {
+	padding-top: 25px;
+} 
+
+#contact .btn {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+}
+#contact .btn:hover {
+	color: #3E4649;
+	background-color: white;
+	border-color: white;
+}

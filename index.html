@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My name is Antonio Franco</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  	<div id="menu">
+	    <nav class="navbar navbar-inverse navbar-static-top" id="stickynav">
+			<div>
+				<div class="navbar-header">
+
+					<!-- Navbar will collapse into a single button-->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			      	</button>
+
+	      			<a class="navbar-brand" href="#home">Antonio Franco</a>
+					
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#about">About me</a></li>
+						<li><a href="#">Fun stuff</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My apps<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Snake</a></li>
+								<li><a href="#">2048</a></li>
+								<li><a href="#">Piano</a></li>
+							</ul>
+						</li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="jumbotron" id="home">
+		<div>
+			<h1>Hello. This is my website.</h1>
+			
+			<p>Yup. There really isn't much here yet. I'll update this eventually like any other CS student trying to make a website to be fancy and stuff.</p>
+			
+			<p class="buttons">
+				<a class="btn btn-primary btn-lg" href="#" role="button">Resume »</a> 
+				<a class="btn btn-primary btn-lg" href="https://github.com/ABFranco" target="_blank" role="button">GitHub »</a>
+			</p>
+		</div>
+	</div>
+
+	<!-- picture section -->
+	<div class='self_pic'>
+		<div class="picture_row">
+			<img id="head_pic" src="pictures/self_pic.jpg" width="250px" />
+		</div>
+
+		<div class = "picture_text">
+			<p>Here is a picture of me as I sit in this nice area in Berkeley.</p>
+			</br>
+			<p>I was eating tacos, you can't see theme here.</p>
+		</div>
+
+		<div style="clear:both"></div>
+	</div>
+
+
+	<!-- about me -->
+    
+    <section id="about">
+    	<div class="container">
+    	<h2 class="section_title">About me</h2>
+			<div class="row">
+				<div class="col-md-3">
+					<span class="glyphicon glyphicon-education glyphicon-large" aria-hidden="true"></span>
+					<h3>Education</h3>
+					<p id="education">I currently do the Berkeley EECS as a third year.</p>
+				</div>
+				<div class="col-md-3">
+					<span class="glyphicon glyphicon-cutlery glyphicon-large" aria-hidden="true"></span>
+					<h3>Cooking</h3>
+					<p id="cooking">I meal prep and hope to be the next Gordon Ramsay.</p>
+				</div>
+				<div class="col-md-3">
+					<span class="glyphicon glyphicon-sunglasses glyphicon-large" aria-hidden="true"></span>
+					<h3>Style</h3>
+					<p>Thanks to Shbloob, I have a good taste in style via H&amp;M.</p>
+				</div>
+				<div class="col-md-3">
+					<span class="glyphicon glyphicon-music glyphicon-large" aria-hidden="true"></span>
+					<h3>Music</h3>
+					<p>I sometimes play a saxophone.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--contact-->
+
+	<div id="contact" >
+	  <h2 class="text-center">Contact me!</h2>
+	  <div id="border" class="row test">
+	    <div id="contact_parent" class="col-md-4">
+	      <p id="message">I am available to contact via <br> email or by filling out this form:</p>
+	      <p><span class="glyphicon glyphicon-envelope glyphicon-large"></span></p> 
+	      <h3>Email: abfranco@berkeley.edu</h3>
+	    </div>
+	    <div id="contact_parent" class="col-md-8">
+	      <div class="row">
+	        <div class="col-sm-6 form-group">
+	          <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required>
+	        </div>
+	        <div class="col-sm-6 form-group">
+	          <input class="form-control" id="email" name="email" placeholder="Your Email" type="email" required>
+	        </div>
+	      </div>
+	      <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
+	      <div class="row">
+	        <div class="col-md-12 form-group">
+	          <button class="btn pull-right" type="submit">Send</button>
+	        </div>
+	      </div> 
+	    </div>
+	  </div>
+	</div>
+
+
+	
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+    	$(".glyphicon").mouseenter(function() {
+    		//$(this).hide();
+    	});
+
+    	// Add smooth scrolling to all links in navbar + footer link
+		$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+			// Prevent default anchor click behavior
+			event.preventDefault();
+
+		    // Store hash
+		    var hash = this.hash;
+
+		    // Using jQuery's animate() method to add smooth page scroll
+		    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		    $('html, body').animate({
+		      scrollTop: $(hash).offset().top
+		    }, 900, function(){
+
+		      // Add hash (#) to URL when done scrolling (default click behavior)
+		      window.location.hash = hash;
+		      });
+		    } // End if 
+		  });
+
+
+    });
+
+
+
+    </script>
+  </body>
+
+</html>
