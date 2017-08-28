@@ -87,23 +87,31 @@
 			<div class="row">
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-education glyphicon-large" aria-hidden="true"></span>
-					<h3>Education</h3>
-					<p id="education">I currently do the Berkeley EECS as a third year.</p>
+					<div id="divhide" class="divhide hide">
+						<h3>Education</h3>
+						<p id="education">I currently do the Berkeley EECS as a third year.</p>
+					</div>
 				</div>
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-cutlery glyphicon-large" aria-hidden="true"></span>
-					<h3>Cooking</h3>
-					<p id="cooking">I meal prep and hope to be the next Gordon Ramsay.</p>
+					<div id="divhide" class="divhide hide">
+						<h3>Cooking</h3>
+						<p id="cooking">I meal prep and hope to be the next Gordon Ramsay.</p>
+					</div>
 				</div>
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-sunglasses glyphicon-large" aria-hidden="true"></span>
-					<h3>Style</h3>
-					<p>Thanks to Shbloob, I have a good taste in style via H&amp;M.</p>
+					<div id="divhide" class="divhide hide">
+						<h3>Style</h3>
+						<p>Thanks to Shbloob, I have a good taste in style via H&amp;M.</p>
+					</div>
 				</div>
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-music glyphicon-large" aria-hidden="true"></span>
-					<h3>Music</h3>
-					<p>I sometimes play a saxophone.</p>
+					<div id="divhide" class= "divhide hide">
+						<h3>Music</h3>
+						<p>I sometimes play a saxophone.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -188,6 +196,85 @@
 		    } // End if
 		  });
 
+		$(document).ready(function(){
+		  //Take your div into one js variable
+		  $(".divhide").each(function(){
+			  var div = $(this);
+			  //Take the current position (vertical position from top) of your div in the variable
+			  var pos = div.position();
+			  //Now when scroll event trigger do following
+				$(window).scroll(function () {
+				   var windowpos = $(window).scrollTop();
+				   //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+				   // I am taking 100px scroll, you can take whatever you need
+				   if (windowpos >= (pos.top - 25)) {
+				     div.addClass("show");
+				   }
+				   //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again 
+				   else {
+				     div.removeClass("show");
+				   }
+				   //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
+			
+		 		});
+		 	});
+		});
+
+		/*
+		$(window).scroll(function() {
+		  $(".slideanim").each(function(){
+		    var pos = $(this).offset().top;
+
+		    var winTop = $(window).scrollTop();
+		    if (pos < winTop + 600) {
+		      $(this).addClass("slide");
+		    }
+		  });
+		});
+		*/
+		/*
+
+		attempt #2 lol
+		$(window).scroll(function() {
+			const scrollTop = $(window).scrollTop();
+			
+	      	$(".hide").each(function(){
+	      		var pos1 = $(this).offset().top;
+	      		console.log("I have class hide");
+	      		//console.log("info");
+	      		//console.log(pos);
+	      		//console.log(scrollTop + 550);
+	      		if ((pos1 < scrollTop + 550)) {
+	      			console.log("hide if");
+			    	$(this).addClass("show");
+				    $(this).removeClass("hide1");
+				    //$(this).slideDown();
+				} else if ((pos1 > scrollTop + 550)) {
+					console.log("hide else");
+				    $(this).addClass("hide1");
+				    $(this).removeClass("show");
+				    //$(this).slideDown();
+				}
+			    
+			});
+
+	      	/*
+		    $(".show").each(function(){
+	      		var pos2 = $(this).offset().top;
+	      		console.log("I have class show");
+	      		if ((pos2 < scrollTop + 550)) {
+			    	console.log("show if");
+				} else {
+					console.log("show else");
+					$(this).addClass("hide");
+				    $(this).removeClass("show");
+				    $(this).slideUp();
+				}
+			    
+			});
+			
+		});
+		*/
 
     });
 
