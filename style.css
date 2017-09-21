@@ -223,9 +223,14 @@ p {
 	text-align: center;
 }
 
-#message {
+#messageMe {
 	padding-top: 25px;
 } 
+
+/*#contact_parent #email {
+	margin-left: 50px;
+}
+*/
 
 #contact .btn {
 	color: #fff;
