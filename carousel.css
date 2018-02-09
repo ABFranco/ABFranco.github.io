@@ -1,0 +1,56 @@
+
+
+#myCarousel {
+	width: 100%;
+	padding: auto;
+	background-color: rgba(100, 100, 100, 0);
+}
+
+#myCarousel img {
+	margin: auto;
+	height: 10%;
+	width: 90%;
+	display: block;
+}
+
+.carousel-inner {
+	margin: auto;
+	width: 100%;
+	height: 500px;
+}
+
+.container h1 {
+	text-align: center;
+	color: white;
+	margin: 20px;
+}
+
+.carousel-inner p,h2 {
+	text-align: center;
+	color: #3F4B55;
+}
+
+.active {
+	background-color: rgba(100, 0, 0, 0);
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+
+}
+
+.carousel-control {
+	height:0;
+   top:50%;
+}
+
+#first {
+	border-radius: 10px;
+  	padding: 10px;
+  	box-shadow: 5px 5px  0px rgba(182, 190, 196, 0.5);
+	margin: auto;
+	padding-bottom: 75px;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(158, 183, 200, 1);
+	width: 1000px;
+}

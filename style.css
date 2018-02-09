@@ -3,7 +3,7 @@
 body {
 	background: #3E4649;
 	color: #f7f7f7;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Segoe UI', sans-serif;
 	margin-top: 40px;
 
 }
@@ -21,6 +21,15 @@ p {
 	color: #cdcdcd;
 }
 
+body, html {
+	height: 100%;
+}
+
+.container {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
 
 
 
@@ -42,6 +51,98 @@ p {
   box-shadow: 0px 1px 2px 1px black;
 }
 
+#topImage {
+	background-image: url("pictures/topImage.jpg");
+  	width: 100%;
+  	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.intro {
+	border-radius: 10px;
+  	padding: 10px;
+	padding-top: 50px;
+	margin: auto;
+	color: black;
+
+	width: 1000px;
+	margin-bottom: 50px;
+}
+
+.intro h1 {
+	font-family: 'Allura', cursive;
+	font-size: 100px;
+	text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+}
+
+.hello {
+	border-radius: 10px;
+  	padding: 10px;
+  	box-shadow: 5px 5px  20px rgba(182, 190, 196, 0.8);
+	margin: auto;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: linear-gradient(to bottom right, rgba(220, 231, 239, 0.7), rgba(158, 183, 200, 0.7));
+	width: 750px;
+}
+.hello h1, p {
+	text-align: center;
+	color: #3F4B55;
+  	width: 100%
+}
+
+.hello p {
+	font-size: 20px;
+}
+
+.hello img {
+	display: block;
+	margin-top:10px;
+	margin-bottom:10px;
+  	margin-left: auto;
+  	margin-right: auto;
+	border-radius: 50%;
+}
+
+.hello .btn-primary {
+	border-radius: 4px;
+	background-color: transparent;
+	border-color: #3F4B55;
+	color: #3F4B55;
+	text-align: center;
+	font-size: 20px;
+	padding: 20px;
+	width: 250px;
+	cursor: pointer;
+	margin-bottom: 5px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.hello .btn-primary:hover {
+	color: white;
+	background-color: #3F4B55;
+	border-color: #3F4B55;
+	transition: 0.1s;
+}
+
+.hello .btn-primary span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.1s;
+
+}
+
+.hello.btn-primary span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+
+}
 
 /* --------jumbotron--------- */
 
@@ -50,7 +151,7 @@ p {
 	color: white;
 	text-align: center;
 	padding-top: 60px;
-    margin-top: -40px;
+  margin-top: -40px;
 }
 .jumbotron p {
 	margin-left: auto;
@@ -60,19 +161,6 @@ p {
 	font-size: 26px;
 }
 
-/*
-.btn-primary {
-	color: #fff;
-	background-color: transparent;
-	border-color: white;
-	margin-bottom: 5px;
-	margin-right: 20px;
-	margin-left: 20px;
-	transition: all 0.5s;
-	cursor: pointer;
-	margin: 5px;
-}
-*/
 
 
 .btn-primary {
@@ -112,7 +200,6 @@ p {
 	top: 0;
 	right: -20px;
 
-
 }
 
 .btn-primary:hover span {
@@ -127,9 +214,6 @@ p {
 
 }
 
-.active {
-  background-color: green !important;
-}
 
 
 /* -------picture section-------- */
@@ -143,7 +227,7 @@ p {
 	float:left;
 	margin-left: 100px;
 	width: 250px;
-	
+
 }
 
 .picture_text {
@@ -164,7 +248,7 @@ p {
 #about .row {
 	border-radius: 10px;
 	background-color: SlateBlue;
-	padding: 20px; 
+	padding: 20px;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	margin-top: 25px;
@@ -190,14 +274,14 @@ p {
 }
 
 .hide {
-	height: 100px; 
-  	width: 100%; 
+	height: 100px;
+  	width: 100%;
   	display: none
 }
 
 .show {
-	height: 100px; 
-  	width: 100%; 
+	height: 100px;
+  	width: 100%;
   	display: block;
 }
 
@@ -210,7 +294,7 @@ p {
 }
 
 #contact .row {
-	padding: 20px; 
+	padding: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-top: 20px;
@@ -229,7 +313,7 @@ p {
 
 #messageMe {
 	padding-top: 25px;
-} 
+}
 
 /*#contact_parent #email {
 	margin-left: 50px;

@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
 
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
   </head>
 
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
   	<div id="menu">
 	    <nav class="navbar navbar-inverse navbar-static-top" id="stickynav">
 			<div>
@@ -29,22 +32,19 @@
 				        <span class="icon-bar"></span>
 			      	</button>
 
-	      			<a class="navbar-brand" href="#home">Antonio Franco</a>
+	      			<a class="navbar-brand" href="#topImage">Antonio Franco</a>
 
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#about">About me</a></li>
-						<!--
+
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My apps<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">none</a></li>
-								<li><a href="#">lol</a></li>
-								<li><a href="#"></a></li>
+								<!--li><a href="#">SynchoShare</a></li-->
 							</ul>
 						</li>
-						-->
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
@@ -52,17 +52,98 @@
 		</nav>
 	</div>
 
-	<div class="jumbotron" id="home">
-		<div>
-			<h1>Hello. </h1>
+  <div id="topImage">
+    <div class="intro">
+			<h1>welcome...</span></h1>
 
-			<p>My name is Antonio Franco. <br> I'm a third year in UC Berkeley, studying in the university's EECS program. I currently have interest in a future career in software. </p>
+  	</div>
+    <div class="hello">
+		<h1>Hello. My name is Antonio Franco.</h1>
+		<img id="head_pic" src="pictures/self-pic.jpg" width="250px" />
+
+		<p>UC Berkeley Student studying Computer Science.</p>
+
+		<!--p class="buttons">
+			<a class="btn btn-primary btn-lg" href="#about" role="button">Learn more about me »</a>
+		</p-->
+  	</div>
+  </div>
+
+	<div class="jumbotron">
+		<div>
+			<h1>Hello. This is my website.</h1>
+
+			<p>Yup. There really isn't much here yet. I'll update this eventually like any other CS student trying to make a website to be fancy and stuff.</p>
 
 			<p class="buttons">
-				<a class="btn btn-primary btn-lg" href="resume.pdf" target="_blank" role="button"><span>Resume</span></a>
-				<a class="btn btn-primary btn-lg" href="https://github.com/ABFranco" target="_blank" role="button"><span>GitHub</span></a>
+				<a class="btn btn-primary btn-lg" href="#" role="button">Resume »</a>
+				<a class="btn btn-primary btn-lg" href="https://github.com/ABFranco" target="_blank" role="button">GitHub »</a>
 			</p>
 		</div>
+	</div>
+
+	<div class="container">
+	  <h1>Projects</h1>  
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1"></li>
+	      <li data-target="#myCarousel" data-slide-to="2"></li>
+	    </ol>
+
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner">
+	      <div class="item active">
+	      	<div id="first">
+	      		<div class="row">
+					<div class="col-md-7">
+						<img src="pictures/synchoshare1.jpg" alt="Los Angeles">
+					</div>
+					<div class="col-md-5">
+						<h2>SynchoShare</h2>
+		        		<p>Personal project using the MEAN stack. <br>
+		        			Includes functions such as account registration, music playback, and a chatroom. <br>
+		        			Utilizes sockets.io to allow users to interact by communicating with the server. </p>
+					</div>
+				</div>
+	      	</div>
+	        
+
+	      </div>
+
+	      <div class="item">
+	        <div id="first">
+	      		<div class="row">
+					<div class="col-md-7">
+					</div>
+					<div class="col-md-5">
+						<h2>Music Sharer</h2>
+		        		<p>Personal project using PHP. <br>
+		        			After registring an account, the user can upload audio files to the server and play back the audio from any device. <br>
+		        			Other functionality includes editing account details when logged in. </p>
+					</div>
+				</div>
+	      	</div>
+	      </div>
+	    
+	      <div class="item">
+	        <div class="carousel-caption">
+		      <h3>Text Editor</h3>
+		      <p>Class software project.</p>
+		    </div>
+	      </div>
+	    </div>
+	    <!-- Left and right controls -->
+	    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	      <span class="glyphicon glyphicon-chevron-left"></span>
+	      <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	      <span class="glyphicon glyphicon-chevron-right"></span>
+	      <span class="sr-only">Next</span>
+	    </a>
+	  </div>
 	</div>
 
 	<!-- picture section -->
@@ -74,7 +155,7 @@
 		<div class = "picture_text">
 			<p>Here is a picture of me as I sit in this nice area in Berkeley.</p>
 			</br>
-			<p>I was eating tacos, you can't see them here.</p>
+			<p>I was eating tacos, you can't see theme here.</p>
 		</div>
 
 		<div style="clear:both"></div>
@@ -89,31 +170,23 @@
 			<div class="row">
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-education glyphicon-large" aria-hidden="true"></span>
-					<div id="divhide" class="divhide hide">
-						<h3>Education</h3>
-						<p id="education">I currently study towards a B.S. in Electrical Engineering and Computer Science (EECS) in UC Berkeley. My main focus is Computer Science and software.</p>
-					</div>
+					<h3>Education</h3>
+					<p id="education">I currently do the Berkeley EECS as a third year.</p>
 				</div>
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-cutlery glyphicon-large" aria-hidden="true"></span>
-					<div id="divhide" class="divhide hide">
-						<h3>Cooking</h3>
-						<p id="cooking">Currently, I have interest in cooking, which I do almost daily. I hope to find the healthiest and easy-to-cook meals to meal prep with in order to satisfy my busy schedule and gym goals.</p>
-					</div>
+					<h3>Cooking</h3>
+					<p id="cooking">I meal prep and hope to be the next Gordon Ramsay.</p>
 				</div>
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-sunglasses glyphicon-large" aria-hidden="true"></span>
-					<div id="divhide" class="divhide hide">
-						<h3>Style</h3>
-						<p>In the process in learning what men's style means. I try my best to have good style via H&amp;M.</p>
-					</div>
+					<h3>Style</h3>
+					<p>Thanks to Shbloob, I have a good taste in style via H&amp;M.</p>
 				</div>
 				<div class="col-md-3">
 					<span class="glyphicon glyphicon-music glyphicon-large" aria-hidden="true"></span>
-					<div id="divhide" class= "divhide hide">
-						<h3>Music</h3>
-						<p>As a hobby, I like to play saxophone. I play alto, and mainly have interest in jazz. </p>
-					</div>
+					<h3>Music</h3>
+					<p>I sometimes play a saxophone.</p>
 				</div>
 			</div>
 		</div>
@@ -121,64 +194,32 @@
 
 	<!--contact-->
 
-	<div id="contact">
-		<form role="form" method="post" action="index.php">
-		  <h2 class="text-center">Contact me!</h2>
-		  <div id="border" class="row test">
-		    <div id="contact_parent">
-		      <p id="message">I am available to contact via <br> email:</p>
-		      <p><span class="glyphicon glyphicon-envelope glyphicon-large"></span></p>
-		      <h3>Email: abfranco@berkeley.edu</h3>
-		    </div>
-
-		    </div>
-		</form>
+	<div id="contact" >
+	  <h2 class="text-center">Contact me!</h2>
+	  <div id="border" class="row test">
+	    <div id="contact_parent" class="col-md-4">
+	      <p id="message">I am available to contact via <br> email or by filling out this form:</p>
+	      <p><span class="glyphicon glyphicon-envelope glyphicon-large"></span></p>
+	      <h3>Email: abfranco@berkeley.edu</h3>
+	    </div>
+	    <div id="contact_parent" class="col-md-8">
+	      <div class="row">
+	        <div class="col-sm-6 form-group">
+	          <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required>
+	        </div>
+	        <div class="col-sm-6 form-group">
+	          <input class="form-control" id="email" name="email" placeholder="Your Email" type="email" required>
+	        </div>
+	      </div>
+	      <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
+	      <div class="row">
+	        <div class="col-md-12 form-group">
+	          <button class="btn pull-right" type="submit">Send</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 	</div>
-
-	<!--
-	<div id="contact">
-		<form role="form" method="post" action="index.php">
-		  <h2 class="text-center">Contact me!</h2>
-		  <div id="border" class="row test">
-		    <div id="contact_parent" class="col-md-4">
-		      <p id="message">I am available to contact via <br> email or by filling out this form:</p>
-		      <p><span class="glyphicon glyphicon-envelope glyphicon-large"></span></p>
-		      <h3>Email: abfranco@berkeley.edu</h3>
-		    </div>
-		    <div id="contact_parent" class="col-md-8">
-		      <div class="row">
-		        <div class="col-sm-6 form-group">
-		          <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required
-		          >
-
-		        </div>
-		        <div class="col-sm-6 form-group">
-		          <input class="form-control" id="email" name="email" placeholder="Your Email" type="email" required>
-
-		        </div>
-		      </div>
-			      <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5" required></textarea>
-
-		      <div class="row">
-		        <div class="col-md-12 form-group">
-		          <button class="btn pull-right" id="submit" name="submit" type="submit" value="Send">Send</button>
-		        </div>
-		        </div>
-		        </div>
-		    </div>
-		</form>
-	</div>
-	-->
-
-	<!-- footer -->
-
-	<footer class="container-fluid text-center">
-	  <a href="#home">
-	    <span class="glyphicon glyphicon-chevron-up"></span>
-	    <p id="small">To Top</p>
-	  </a>
-	  <p>© Copyright 2017 abfranco.github.io. All rights reserved. <br> Designed by Antonio Franco.</p> 
-	</footer>
 
 
 
@@ -187,7 +228,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <script type="text/javascript">
     $(document).ready(function() {
@@ -197,7 +238,7 @@
     	});
 
     	// Add smooth scrolling to all links in navbar + footer link
-		$(".navbar a, footer a[href='#home']").on('click', function(event) {
+		$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
 
 		// Make sure this.hash has a value before overriding default behavior
@@ -220,91 +261,12 @@
 		    } // End if
 		  });
 
-		$(document).ready(function(){
-		  //Take your div into one js variable
-		  $(".divhide").each(function(){
-			  var div = $(this);
-			  //Take the current position (vertical position from top) of your div in the variable
-			  var pos = div.position();
-			  //Now when scroll event trigger do following
-				$(window).scroll(function () {
-				   var windowpos = $(window).scrollTop();
-				   //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-				   // I am taking 100px scroll, you can take whatever you need
-				   if (windowpos >= (pos.top - 125)) {
-				     div.addClass("show");
-				   }
-				   //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again 
-				   else {
-				     div.removeClass("show");
-				   }
-				   //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
-			
-		 		});
-		 	});
-		});
-
-		/*
-		$(window).scroll(function() {
-		  $(".slideanim").each(function(){
-		    var pos = $(this).offset().top;
-
-		    var winTop = $(window).scrollTop();
-		    if (pos < winTop + 600) {
-		      $(this).addClass("slide");
-		    }
-		  });
-		});
-		*/
-		/*
-
-		attempt #2 lol
-		$(window).scroll(function() {
-			const scrollTop = $(window).scrollTop();
-			
-	      	$(".hide").each(function(){
-	      		var pos1 = $(this).offset().top;
-	      		console.log("I have class hide");
-	      		//console.log("info");
-	      		//console.log(pos);
-	      		//console.log(scrollTop + 550);
-	      		if ((pos1 < scrollTop + 550)) {
-	      			console.log("hide if");
-			    	$(this).addClass("show");
-				    $(this).removeClass("hide1");
-				    //$(this).slideDown();
-				} else if ((pos1 > scrollTop + 550)) {
-					console.log("hide else");
-				    $(this).addClass("hide1");
-				    $(this).removeClass("show");
-				    //$(this).slideDown();
-				}
-			    
-			});
-
-	      	/*
-		    $(".show").each(function(){
-	      		var pos2 = $(this).offset().top;
-	      		console.log("I have class show");
-	      		if ((pos2 < scrollTop + 550)) {
-			    	console.log("show if");
-				} else {
-					console.log("show else");
-					$(this).addClass("hide");
-				    $(this).removeClass("show");
-				    $(this).slideUp();
-				}
-			    
-			});
-			
-		});
-		*/
 
     });
 
+
+
     </script>
-
-
   </body>
 
 </html>
