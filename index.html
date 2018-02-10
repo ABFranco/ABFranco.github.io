@@ -10,6 +10,7 @@
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="carousel.css">
+    <link rel="stylesheet" type="text/css" href="about_me.css">
     <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
 
 
@@ -38,13 +39,14 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#about">About me</a></li>
-
-						<li class="dropdown">
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<!--li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My apps<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<!--li><a href="#">SynchoShare</a></li-->
+								<li><a href="#">SynchoShare</a></li>
 							</ul>
-						</li>
+						</li-->
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
@@ -69,11 +71,37 @@
   	</div>
   </div>
 
+	
+
+	<section id="about">
+    	<div class="container">
+    	
+			<div class="row">
+				<div class="col-md-6">
+					<img id="about_pic" src="pictures/about_me.png"  />
+				</div>
+				<div class="col-md-6">
+					<h2 class="section_title">About me</h2>
+		        		<p>
+		        			I am currently a 3rd year student studying Computer<br>
+		        			Science in UC Berkeley's Engineering department. Developing <br>
+		        			software with meaningful goals is a field of work I plan to <br>
+		        			take part in. The creative process needed in order to<br>
+		        			construct products that audiences will enjoy is a task I am <br>
+		        			passionate about. Front-end and back-end development are both areas <br>
+		        			I am curious about. I aim for personal growth every day, and I hope <br>
+		        			to learn new technologies and languages in my future.
+
+		        		</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<div class="jumbotron">
 		<div>
-			<h1>Hello. This is my website.</h1>
 
-			<p>Yup. There really isn't much here yet. I'll update this eventually like any other CS student trying to make a website to be fancy and stuff.</p>
+			<p>Feel free to also check out my resume and Github.</p>
 
 			<p class="buttons">
 				<a class="btn btn-primary btn-lg" href="#" role="button">Resume »</a>
@@ -82,9 +110,11 @@
 		</div>
 	</div>
 
-	<div class="container">
-	  <h1>Projects</h1>  
+	<!-- Carousel for projects -->
+	<div class="container" id="projects">
+	  
 	  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+	  	<h1>Projects</h1>  
 	    <!-- Indicators -->
 	    <ol class="carousel-indicators">
 	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -92,19 +122,21 @@
 	      <li data-target="#myCarousel" data-slide-to="2"></li>
 	    </ol>
 
-	    <!-- Wrapper for slides -->
+	    
 	    <div class="carousel-inner">
 	      <div class="item active">
 	      	<div id="first">
 	      		<div class="row">
 					<div class="col-md-7">
-						<img src="pictures/synchoshare1.jpg" alt="Los Angeles">
+						<img src="pictures/synchoshare1.jpg" alt="synchoshare_img">
 					</div>
 					<div class="col-md-5">
 						<h2>SynchoShare</h2>
 		        		<p>Personal project using the MEAN stack. <br>
 		        			Includes functions such as account registration, music playback, and a chatroom. <br>
-		        			Utilizes sockets.io to allow users to interact by communicating with the server. </p>
+		        			Utilizes sockets.io to allow users to interact by communicating with a server. <br>
+		        			More features and updates to occur in the future.
+		        			Access this website at <a href="http://www.synchoshare.tk" target="_blank">www.synchoshare.tk</a>.</p>
 					</div>
 				</div>
 	      	</div>
@@ -162,7 +194,7 @@
 	</div>
 
 
-	<!-- about me -->
+	<!-- about me >
 
     <section id="about">
     	<div class="container">
@@ -192,7 +224,7 @@
 		</div>
 	</section>
 
-	<!--contact-->
+	<contact-->
 
 	<div id="contact" >
 	  <h2 class="text-center">Contact me!</h2>

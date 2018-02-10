@@ -1,6 +1,7 @@
 
 
 #myCarousel {
+	padding-top: 60px;
 	width: 100%;
 	padding: auto;
 	background-color: rgba(100, 100, 100, 0);
@@ -26,7 +27,7 @@
 }
 
 .carousel-inner p,h2 {
-	text-align: center;
+	text-align: left;
 	color: #3F4B55;
 }
 
