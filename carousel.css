@@ -16,8 +16,9 @@
 
 .carousel-inner {
 	margin: auto;
+	margin-top: 40px;
 	width: 100%;
-	height: 500px;
+	height: 550px;
 }
 
 .container h1 {
@@ -26,7 +27,7 @@
 	margin: 20px;
 }
 
-.carousel-inner p,h2 {
+.carousel-inner p, .carousel-inner h2 {
 	text-align: left;
 	color: #3F4B55;
 }
@@ -46,12 +47,29 @@
 }
 
 #first {
+	margin: auto;
+	padding-bottom: 75px;
+	width: 1000px;
+}
+
+#first-text {
 	border-radius: 10px;
   	padding: 10px;
   	box-shadow: 5px 5px  0px rgba(182, 190, 196, 0.5);
 	margin: auto;
-	padding-bottom: 75px;
+	padding-bottom: 30px;
 	background: rgb(0, 0, 0); /* fallback color */
 	background: rgba(158, 183, 200, 1);
-	width: 1000px;
+	width: 100%;
+}
+
+#second-text {
+	border-radius: 10px;
+  	padding: 10px;
+  	box-shadow: 5px 5px  0px rgba(182, 190, 196, 0.5);
+	margin: auto;
+	padding-bottom: 20px;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(158, 183, 200, 1);
+	width: 100%;
 }

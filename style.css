@@ -87,7 +87,7 @@ body, html {
 	background: linear-gradient(to bottom right, rgba(220, 231, 239, 0.7), rgba(158, 184, 200, 0.7));
 	width: 750px;
 }
-.hello h1, p {
+.hello h1, .hello h2, .hello p {
 	text-align: center;
 	color: #3F4B55;
   	width: 100%
@@ -148,12 +148,19 @@ body, html {
 /* --------jumbotron--------- */
 
 .jumbotron {
-	background: SlateBlue;
+
+	background-image: url("pictures/hex.png");
+	background-size: cover;
+	
 	color: white;
 	text-align: center;
 	padding-top: 60px;
-  margin-top: -40px;
+  	margin-top: 20px;
+  	outline-style: solid;
+  	outline-width: 1px;
+  	outline-color: gray;
 }
+
 
 .jumbotron p {
 	margin-left: auto;
@@ -161,6 +168,9 @@ body, html {
 	width: 1024px;
 	color: white;
 	font-size: 26px;
+	padding-bottom: 30px;
+	font-family: 'Segoe UI';
+
 }
 
 
@@ -244,7 +254,7 @@ body, html {
 /* -----------contact---------- */
 
 #contact {
-	width: 900px;
+	width: 600px;
 	margin-left: auto;
   	margin-right: auto;
 }
@@ -263,18 +273,33 @@ body, html {
 	border-width: 5px;
 }
 
-#contact h2, h3, p {
+#contact h2, #contact h3, #contact p {
 	text-align: center;
+	color: white;
+}
+
+#contact h3 {
+	margin-top: 5px;
+}
+
+#contact p {
+	font-size: 20px;
 }
 
 #messageMe {
 	padding-top: 25px;
 }
 
-/*#contact_parent #email {
-	margin-left: 50px;
+#contact #logo {
+	text-align: center;
+	
 }
-*/
+
+#contact a {
+	color: inherit;
+
+}
+
 
 #contact .btn {
 	color: #fff;
