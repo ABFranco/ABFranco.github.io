@@ -14,6 +14,7 @@
 	display: block;
 }
 
+
 .carousel-inner {
 	margin: auto;
 	margin-top: 40px;
@@ -28,8 +29,11 @@
 }
 
 .carousel-inner p, .carousel-inner h2 {
-	text-align: left;
+	
 	color: #3F4B55;
+}
+.carousel-inner h2 {
+	text-align: center;
 }
 
 .active {
@@ -48,6 +52,7 @@
 
 #first {
 	margin: auto;
+	margin-top: 50px;
 	padding-bottom: 75px;
 	width: 1000px;
 }
@@ -55,6 +60,7 @@
 #first-text {
 	border-radius: 10px;
   	padding: 10px;
+
   	box-shadow: 5px 5px  0px rgba(182, 190, 196, 0.5);
 	margin: auto;
 	padding-bottom: 30px;
@@ -98,4 +104,17 @@
 	display: block;
 	margin: auto;
 	margin-top: 30px;
+}
+
+#last-text {
+	
+	border-radius: 10px;
+  	padding: 10px;
+  	box-shadow: 5px 5px  0px rgba(182, 190, 196, 0.5);
+	margin: auto;
+	margin-top: 100px;
+	padding-bottom: 20px;
+	background: rgb(158, 183, 200);
+	background: rgba(158, 183, 200, 1);
+	width: 30%;
 }

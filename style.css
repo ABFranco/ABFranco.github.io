@@ -149,8 +149,8 @@ body, html {
 
 .jumbotron {
 
-	background-image: url("pictures/hex.png");
-	background-size: cover;
+	background-image: url("pictures/abstract_background.jpg");
+	background-size: 100%;
 	
 	color: white;
 	text-align: center;
@@ -315,6 +315,10 @@ body, html {
 
 /* --------footer---------- */
 
+#footer p {
+	margin: 20px;
+	text-align: center;
+}
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 0px;
