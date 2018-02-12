@@ -68,6 +68,17 @@
 	background: rgba(158, 183, 200, 1);
 	width: 100%;
 }
+#second {
+	margin: auto;
+	margin-top: 50px;
+	padding-bottom: 75px;
+	width: 1000px;
+}
+
+#second img {
+	margin-bottom: 20px;
+	width: 100%;
+}
 
 #second-text {
 	border-radius: 10px;
