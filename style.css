@@ -4,7 +4,8 @@ body {
 	background: #3E4649;
 	color: #f7f7f7;
 	font-family: 'Segoe UI', sans-serif;
-	margin-top: 40px;
+	margin: 0px;
+	padding: 0px;
 
 }
 
@@ -24,6 +25,7 @@ p {
 body, html {
 	height: 100%;
 }
+
 
 .container {
 	padding: 0;
@@ -151,10 +153,10 @@ body, html {
 
 	background-image: url("pictures/abstract_background.jpg");
 	background-size: 100%;
-	
+	width: 100%;
 	color: white;
 	text-align: center;
-	padding-top: 60px;
+	padding: 60px 0px 20px;
   	margin-top: 20px;
   	outline-style: solid;
   	outline-width: 1px;
@@ -251,67 +253,7 @@ body, html {
 
 
 
-/* -----------contact---------- */
 
-#contact {
-	width: 600px;
-	margin-left: auto;
-  	margin-right: auto;
-}
-
-#contact .row {
-	padding: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-#contact #border {
-	border-radius: 50px;
-	border-style: solid;
-	border-width: 5px;
-}
-
-#contact h2, #contact h3, #contact p{
-	text-align: center;
-	color: white;
-}
-
-#contact h3 {
-	margin-top: 5px;
-}
-
-#contact p {
-	font-size: 20px;
-}
-
-#messageMe {
-	padding-top: 25px;
-}
-
-#contact #logo {
-	text-align: center;
-	
-}
-
-#contact a {
-	color: inherit;
-
-}
-
-
-#contact .btn {
-	color: #fff;
-	background-color: transparent;
-	border-color: white;
-	margin-bottom: 5px;
-}
-#contact .btn:hover {
-	color: #3E4649;
-	background-color: white;
-	border-color: white;
-}
 
 /* --------footer---------- */
 
