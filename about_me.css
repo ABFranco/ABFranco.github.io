@@ -2,6 +2,7 @@
 #about {
 	padding-top: 60px;
 	height: 700px;
+	min-width: 800px;
 }
 
 #about h2 {
@@ -22,5 +23,5 @@
 	margin: auto;
 	display: block;
 	width: 100%;
+	min-width: 500px;
 }
-
