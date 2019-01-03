@@ -16,12 +16,13 @@
       rel="stylesheet"
     />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/scripts.js"></script>
   </head>
   <body>
     <header>
       <div>
-        <a href="index.html"><h1>Antonio Franco</h1></a>
+        <a href="#welcome"><h1>Antonio Franco</h1></a>
       </div>
       <div id="shortcuts">
         <a href="#about"><h2>about</h2></a>
@@ -34,143 +35,145 @@
 
     <div class="container">
       <div class="left">
-        <img src="assets/images/logo.svg" />
-        <h1>Welcome!</h1>
+        <div class="left-hide" id="welcome-left">
+          <img src="assets/images/logo.svg" />
+          <h1>Welcome!</h1>
+        </div>
+
+        <div class="left-hide" id="about-left"><h1>about me</h1></div>
+
+        <div class="left-hide" id="skills-left">
+          <h1>Skills</h1>
+          <button>Programming</button> <button>Web Development</button>
+          <button>Design Tools</button> <button>Other Interests</button>
+        </div>
+
+        <div class="left-hide" id="projects-left"><h1>Projects</h1></div>
+
+        <div class="left-hide" id="contact-left"><h1>Contact me!</h1></div>
       </div>
+
       <div class="right">
-        <div id="top-row">
-          <img id="self-pic" src="assets/images/self-pic.jpg" width="250px" />
-          <h1>My name is <br />Antonio Franco.</h1>
+        <div class="right-section" id="welcome">
+          <div id="welcome-top">
+            <img id="self-pic" src="assets/images/self-pic.jpg" width="250px" />
+            <h1>My name is <br />Antonio Franco.</h1>
+          </div>
+          <p>
+            I am a 4th year student studying<br /><b>Computer Science</b> at UC
+            Berkeley
+          </p>
         </div>
-        <p>
-          I am a 4th year student studying<br /><b>Computer Science</b> at UC
-          Berkeley
-        </p>
-      </div>
-    </div>
-
-    <div class="container" id="about">
-      <div class="left"><h1>about me</h1></div>
-      <div class="right">
-        <div id="about-row">
-          <h1>
-            developer.<br />
-            designer.<br />
-            innovator.
-          </h1>
-          <img id="self-pic" src="assets/images/about_me.jpg" width="250px" />
+        <div class="right-section" id="about">
+          <div id="about-row">
+            <h1>
+              developer.<br />
+              designer.<br />
+              innovator.
+            </h1>
+            <img id="self-pic" src="assets/images/about_me.jpg" width="250px" />
+          </div>
+          <p id="about-me">
+            I am currently a 4th year student studying Computer Science in UC
+            Berkeley’s Engineering department. Developing software with meaningful
+            goals is a field of work I plan to take part in. The creative process
+            needed in order to construct products that audiences will enjoy is a
+            task I am passionate about. Lately, web development and design has
+            been a field I have had interest in. However, front-end and back-end
+            development are both areas I am curious about. I aim for personal
+            growth every day, and I hope to learn new technologies and languages
+            in my future.
+          </p>
         </div>
-        <p id="about-me">
-          I am currently a 4th year student studying Computer Science in UC
-          Berkeley’s Engineering department. Developing software with meaningful
-          goals is a field of work I plan to take part in. The creative process
-          needed in order to construct products that audiences will enjoy is a
-          task I am passionate about. Lately, web development and design has
-          been a field I have had interest in. However, front-end and back-end
-          development are both areas I am curious about. I aim for personal
-          growth every day, and I hope to learn new technologies and languages
-          in my future.
-        </p>
-      </div>
-    </div>
 
-    <div class="container" id="skills">
-      <div class="left">
-        <h1>Skills</h1>
-        <button>Programming</button> <button>Web Development</button>
-        <button>Design Tools</button> <button>Other Interests</button>
-      </div>
-
-      <div class="right" id="right-1">
-        <div class="skills-row">
-          <h1>Proficient</h1>
-          <div class="icons">
-            <div class="icon">
-              <img src="assets/images/icons/java.png" />
-              <p>Java</p>
+        <div class="right-section" id="skills">
+          <div id="right-1">
+            <div class="skills-row">
+              <h1>Proficient</h1>
+              <div class="icons">
+                <div class="icon">
+                  <img src="assets/images/icons/java.png" />
+                  <p>Java</p>
+                </div>
+                <div class="icon">
+                  <img src="assets/images/icons/python.png" />
+                  <p>Python</p>
+                </div>
+              </div>
             </div>
-            <div class="icon">
-              <img src="assets/images/icons/python.png" />
-              <p>Python</p>
+            <div class="skills-row">
+              <h1>Familiar</h1>
+              <div class="icons">
+                <div class="icon">
+                  <img src="assets/images/icons/C_logo.png" />
+                  <p>C</p>
+                </div>
+                <div class="icon">
+                  <img src="assets/images/icons/cs.png" />
+                  <p>C#</p>
+                </div>
+                <div class="icon">
+                  <img src="assets/images/icons/sql.png" />
+                  <p>SQL</p>
+                </div>
+
+                <div class="icon">
+                  <img src="assets/images/icons/git.png" />
+                  <p>Git</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="right-2">
+            <div class="skills-row">
+              <h1>Proficient</h1>
+              <div class="icons">
+                <div class="icon">
+                  <img src="assets/images/icons/java.png" />
+                  <p>Java</p>
+                </div>
+                <div class="icon">
+                  <img src="assets/images/icons/python.png" />
+                  <p>Python</p>
+                </div>
+              </div>
+            </div>
+            <div class="skills-row">
+              <h1>Familiar</h1>
+              <div class="icons">
+                <div class="icon">
+                  <img src="assets/images/icons/C_logo.png" />
+                  <p>C</p>
+                </div>
+                <div class="icon">
+                  <img src="assets/images/icons/cs.png" />
+                  <p>C#</p>
+                </div>
+                <div class="icon">
+                  <img src="assets/images/icons/sql.png" />
+                  <p>SQL</p>
+                </div>
+
+                <div class="icon">
+                  <img src="assets/images/icons/git.png" />
+                  <p>Git</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="skills-row">
-          <h1>Familiar</h1>
-          <div class="icons">
-            <div class="icon">
-              <img src="assets/images/icons/C_logo.png" />
-              <p>C</p>
-            </div>
-            <div class="icon">
-              <img src="assets/images/icons/cs.png" />
-              <p>C#</p>
-            </div>
-            <div class="icon">
-              <img src="assets/images/icons/sql.png" />
-              <p>SQL</p>
-            </div>
 
-            <div class="icon">
-              <img src="assets/images/icons/git.png" />
-              <p>Git</p>
-            </div>
-          </div>
+        <div class="right-section" id="projects"><p>Under construction...</p></div>
+
+        <div class="right-section" id="contact">
+          <p>
+            The best way to reach me is to email me at<br />
+            <b>abfranco@berkeley.edu.</b>
+          </p>
         </div>
       </div>
 
-      <div class="right" id="right-2">
-        <div class="skills-row">
-          <h1>Proficient</h1>
-          <div class="icons">
-            <div class="icon">
-              <img src="assets/images/icons/java.png" />
-              <p>Java</p>
-            </div>
-            <div class="icon">
-              <img src="assets/images/icons/python.png" />
-              <p>Python</p>
-            </div>
-          </div>
-        </div>
-        <div class="skills-row">
-          <h1>Familiar</h1>
-          <div class="icons">
-            <div class="icon">
-              <img src="assets/images/icons/C_logo.png" />
-              <p>C</p>
-            </div>
-            <div class="icon">
-              <img src="assets/images/icons/cs.png" />
-              <p>C#</p>
-            </div>
-            <div class="icon">
-              <img src="assets/images/icons/sql.png" />
-              <p>SQL</p>
-            </div>
-
-            <div class="icon">
-              <img src="assets/images/icons/git.png" />
-              <p>Git</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="projects">
-      <div class="left"><h1>Projects</h1></div>
-      <div class="right" id="right"><p>Under construction...</p></div>
-    </div>
-
-    <div class="container" id="contact">
-      <div class="left"><h1>Contact me!</h1></div>
-      <div class="right" id="right">
-        <p>
-          The best way to reach me is to email me at<br />
-          <b>abfranco@berkeley.edu.</b>
-        </p>
-      </div>
-    </div>
+    
   </body>
 </html>
