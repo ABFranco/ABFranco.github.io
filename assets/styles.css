@@ -141,7 +141,7 @@ header div {
   text-align: center;
 }
 
-.right img {
+.right #welcome img {
   width: 20vw;
   height: auto;
   border-radius: 50%;
@@ -173,7 +173,7 @@ header div {
 
 #about p {
   font-size: 1.2vw;
-  margin: 0vh 12vw;
+  margin: 0vh 13vw;
   text-align: left;
   letter-spacing: 0.5px;
   font-family: "Open Sans", sans-serif;
@@ -222,11 +222,13 @@ button {
   height: auto;
 }
 
-#right-1 {
+.skills-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  display: none;
 }
 
 .skills-row {
@@ -242,6 +244,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 1vh 0vw;
 }
 
 .icon {
@@ -249,19 +252,43 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1vh 2vw;
+  height: 7vh;
+  width: 7vw;
+  margin: 2vh 2vw;
 }
 
 .icon p {
   margin-top: 16px;
 }
 
-#right-2 {
+#section-other .skills-row {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  display: none;
+  align-items: flex-start;
+}
+
+#section-other h2 {
+  text-align: left;
+  font-size: 3vw;
+  margin: 4vh 0vh 1vh 0vh;
+  font-weight: 200;
+}
+
+#section-other h3 {
+  text-align: left;
+  font-size: 1.2vw;
+  margin-bottom: 1vh;
+  font-weight: 300;
+}
+
+#section-other p {
+  text-align: left;
+  font-size: 1.2vw;
+  margin-top: 1.5vh;
+  margin-bottom: 2vh;
+  letter-spacing: 0.5px;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*projects */

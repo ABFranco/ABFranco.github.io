@@ -61,6 +61,40 @@ $(document).ready(function() {
   $(".skills-button").mouseover(function() {
     $(".button-on").removeClass("button-on");
     $(this).addClass("button-on");
+
+    if (
+      $(this).is($("#button-prog")) &&
+      !$("#section-prog").hasClass("skill-display")
+    ) {
+      $(".skill-display").fadeOut(250);
+      $(".skill-display").removeClass("skill-display");
+      $("#section-prog").addClass("skill-display");
+      $("#section-prog").fadeIn(250);
+    } else if (
+      $(this).is($("#button-web")) &&
+      !$("#section-web").hasClass("skill-display")
+    ) {
+      $(".skill-display").fadeOut(250);
+      $(".skill-display").removeClass("skill-display");
+      $("#section-web").addClass("skill-display");
+      $("#section-web").fadeIn(250);
+    } else if (
+      $(this).is($("#button-design")) &&
+      !$("#section-design").hasClass("skill-display")
+    ) {
+      $(".skill-display").fadeOut(250);
+      $(".skill-display").removeClass("skill-display");
+      $("#section-design").addClass("skill-display");
+      $("#section-design").fadeIn(250);
+    } else if (
+      $(this).is($("#button-other")) &&
+      !$("#section-other").hasClass("skill-display")
+    ) {
+      $(".skill-display").fadeOut(250);
+      $(".skill-display").removeClass("skill-display");
+      $("#section-other").addClass("skill-display");
+      $("#section-other").fadeIn(250);
+    }
   });
 
   // smooth scroll effct
@@ -75,7 +109,7 @@ $(document).ready(function() {
           {
             scrollTop: target.offset().top
           },
-          500
+          501
         );
     }
   });
