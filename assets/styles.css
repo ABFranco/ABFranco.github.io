@@ -82,14 +82,9 @@ header div {
   position: fixed;
 }
 
-.left-hide {
+.left-section {
   position: fixed;
-  opacity: 0;
-}
-
-.left-show {
-  position: fixed;
-  opacity: 1;
+  display: none;
 }
 
 .right {
@@ -191,6 +186,7 @@ header div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 button {
@@ -205,8 +201,16 @@ button {
   font-size: 3vh;
   font-family: "Raleway", sans-serif;
   text-align: center;
-  border: solid #dcdcdd 8px;
+  border: solid #c5c3c6 8px;
   border-radius: 64px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.button-on {
+  background-color: #3a405a;
+  border: solid rgba(0, 0, 0, 0) 8px;
+  transition: 0.25s;
 }
 
 #skills {
