@@ -40,12 +40,24 @@ header h1 {
   font-weight: 300;
   font-size: 32px;
   color: #46494c;
+  transition: 250ms;
 }
 
 header h2 {
   font-weight: 300;
   font-size: 24px;
   color: #46494c;
+  transition: 250ms;
+}
+
+header h1:hover {
+  transform: scale(1.1);
+  transition: 250ms;
+}
+
+header h2:hover {
+  transform: scale(1.1);
+  transition: 250ms;
 }
 
 header div {
@@ -142,7 +154,7 @@ header div {
 }
 
 .right #welcome img {
-  width: 20vw;
+  width: 18vw;
   height: auto;
   border-radius: 50%;
 }
@@ -159,8 +171,8 @@ header div {
 
 #about img {
   margin: 24px;
-  width: auto;
-  height: 30vh;
+  width: 25vw;
+  height: auto;
   border-radius: 0%;
 }
 
@@ -194,14 +206,14 @@ button {
   height: 10vh;
   text-decoration: none;
   display: inline-block;
-  background-color: #4c5c68;
+  background-color: #666a86;
   color: #c5c3c6;
   padding: 0vh 0vw;
   margin-top: 6vh;
-  font-size: 3vh;
+  font-size: 1.5vw;
   font-family: "Raleway", sans-serif;
   text-align: center;
-  border: solid #c5c3c6 8px;
+  border: solid #c5c3c6 0px;
   border-radius: 64px;
   transition: 0.25s;
   cursor: pointer;
@@ -209,12 +221,15 @@ button {
 
 .button-on {
   background-color: #3a405a;
-  border: solid rgba(0, 0, 0, 0) 8px;
   transition: 0.25s;
 }
 
 #skills {
   margin-top: -8vh;
+}
+
+#skills h1 {
+  text-align: center;
 }
 
 .icon img {
@@ -229,6 +244,10 @@ button {
   align-items: center;
   position: absolute;
   display: none;
+}
+
+#section-prog {
+  display: block;
 }
 
 .skills-row {
@@ -252,8 +271,8 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 7vh;
-  width: 7vw;
+  height: 10vh;
+  width: 10vw;
   margin: 2vh 2vw;
 }
 
@@ -291,8 +310,12 @@ button {
   font-family: "Open Sans", sans-serif;
 }
 
-/*projects */
+#section-other b {
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+}
 
+/*projects */
 #projects p {
   margin: 0;
   padding: 0;

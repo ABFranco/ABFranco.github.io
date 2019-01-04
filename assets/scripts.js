@@ -113,4 +113,61 @@ $(document).ready(function() {
         );
     }
   });
+
+  // scroll effect credits to Vaibs_Cool on stack overflow
+
+  var divs = $(".right-section");
+  var dir = "up"; // wheel scroll direction
+  var div = 0; // current div
+  $(document.body).on("DOMMouseScroll mousewheel", sectionScroll);
+
+  function sectionScroll(e) {
+    $(document.body).off();
+    //console.log(e.originalEvent.detail);
+    //console.log(e.originalEvent.wheelDelta);
+    if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+      dir = "down";
+    } else {
+      dir = "up";
+    }
+    // find currently visible div :
+    div = -2;
+    divs.each(function(i) {
+      if (div < 0 && $(this).offset().top >= $(window).scrollTop()) {
+        div = i;
+      }
+    });
+    if (dir == "up" && div > 0) {
+      div--;
+    }
+    if (dir == "down" && div < divs.length) {
+      div++;
+    }
+    if (div == divs.length) {
+      div = 4;
+    }
+
+    //console.log(div, dir, divs.length, divs.eq(div));
+    $("html,body")
+      .stop()
+      .animate(
+        {
+          scrollTop: divs.eq(div).offset().top
+        },
+        500
+      );
+
+    // disable scroll wheel
+    $("body").bind("mousewheel", function() {
+      return false;
+    });
+    // delay before enabling scroll wheel
+    setTimeout(addSectionScroll, 600);
+    return false;
+  }
+
+  function addSectionScroll() {
+    // enable scroll wheel
+    $(document.body).on("DOMMouseScroll mousewheel", sectionScroll);
+  }
 });
