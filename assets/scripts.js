@@ -162,7 +162,7 @@ $(document).ready(function() {
       return false;
     });
     // delay before enabling scroll wheel
-    setTimeout(addSectionScroll, 600);
+    setTimeout(addSectionScroll, 1000);
     return false;
   }
 
