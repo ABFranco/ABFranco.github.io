@@ -318,10 +318,56 @@ button {
 }
 
 /*projects */
+#projects {
+  margin: 2vw;
+}
+
+#projects h2 {
+  margin: 1vw;
+  padding: 0;
+  font-size: 3vw;
+  font-weight: 300;
+}
+
 #projects p {
   margin: 0;
   padding: 0;
+  font-size: 1vw;
 }
+
+#projects .project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+}
+
+#projects .active {
+  display: flex;
+}
+
+#project-first img {
+  width: 40vw;
+  height: auto;
+  margin-top: 5vw;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#project-second img {
+  width: 15vw;
+  height: auto;
+  margin: 4px;
+}
+
+/* contact */
 
 #contact p {
   margin: 0;
