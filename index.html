@@ -54,7 +54,19 @@
           </button>
         </div>
 
-        <div class="left-section" id="projects-left"><h1>Projects</h1></div>
+        <div class="left-section" id="projects-left">
+          <h1>Projects</h1>
+          <button class="projects-button button-on" id="button-proj1">
+            SynchoShare
+          </button>
+          <button class="projects-button" id="button-proj2">
+            Music Sharer
+          </button>
+          <button class="projects-button" id="button-proj3">Text Editor</button>
+          <button class="projects-button" id="button-proj4">
+            This Website
+          </button>
+        </div>
 
         <div class="left-section" id="contact-left"><h1>Contact me!</h1></div>
       </div>
@@ -173,7 +185,7 @@
           </div>
           <div class="skills-section" id="section-design">
             <div class="skills-row">
-              <h1>creativity</h1>
+              <h1>Creativity</h1>
               <div class="icons">
                 <div class="icon">
                   <img src="assets/images/icons/figma.png" />
@@ -214,7 +226,12 @@
                 presentations. I am meticulous when it comes to my editing
                 quality, and it has allowed me to express a different side of my
                 artistic interest through my knowledge of an application. An
-                example of my editing can be seen below.
+                example of my editing can be seen
+                <a
+                  href="https://www.youtube.com/watch?v=6fgoQJtpWfA"
+                  target="_blank"
+                  >here</a
+                >.
               </p>
             </div>
           </div>
@@ -222,7 +239,7 @@
 
         <div class="right-section" id="projects">
           <div class="carousel">
-            <div class="project-item" id="project-first">
+            <div class="project-item project-display" id="project-first">
               <div class="project-text">
                 <h2>SynchoShare</h2>
                 <p>
@@ -239,7 +256,7 @@
               <img src="assets/images/synchoshare.png" alt="synchoshare_img" />
             </div>
 
-            <div class="project-item active" id="project-second">
+            <div class="project-item" id="project-second">
               <div id="project-second-images">
                 <div class="project-second-row">
                   <img
@@ -276,8 +293,9 @@
                 </p>
               </div>
             </div>
+
             <div class="project-item" id="project-third">
-              <img src="assets/images/editor/example.gif" alt="test" />
+              <img src="assets/images/editor/example.gif" id="large-image" />
               <div id="project-third-right">
                 <div id="project-third-text">
                   <h2>Text Editor</h2>
@@ -298,29 +316,16 @@
             </div>
 
             <div class="project-item" id="project-fourth">
-              <div id="project-fourth-text">
+              <div class="project-text" id="project-fourth-text">
                 <h2>This Website</h2>
                 <p>
-                  I personally created this website using mainly HTML and CSS
-                  with a bit of JavaScript. More updates to this website will
+                  I personally created this website using mainly HTML and CSS as
+                  well as JavaScript/jQuery. More updates to this website will
                   come in the future!
                 </p>
               </div>
             </div>
           </div>
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="right carousel-control"
-            href="#myCarousel"
-            data-slide="next"
-          >
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
 
         <div class="right-section" id="contact">
@@ -329,7 +334,11 @@
             <b>abfranco@berkeley.edu</b>
           </p>
           <div id="footer">
-            <p><a href="version1/index.html">Website Version 1</a></p>
+            <p>
+              <a href="version1/index.html" target="_blank"
+                >Website Version 1</a
+              >
+            </p>
             <p>© 2018 Antonio Franco</p>
           </div>
         </div>

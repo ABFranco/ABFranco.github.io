@@ -318,6 +318,14 @@ button {
 }
 
 /*projects */
+
+#projects-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
 #projects {
   margin: 2vw;
 }
@@ -332,7 +340,9 @@ button {
 #projects p {
   margin: 0;
   padding: 0;
-  font-size: 1vw;
+  font-size: 1.25vw;
+  text-align: left;
+  width: 30vw;
 }
 
 #projects .project-item {
@@ -340,18 +350,38 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   display: none;
+  height: 80vh;
 }
 
-#projects .active {
+#projects .project-display {
   display: flex;
 }
 
-#project-first img {
-  width: 40vw;
-  height: auto;
-  margin-top: 5vw;
+#projects #project-third {
+  flex-direction: row;
+}
+
+#project-third-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#project-third-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh;
+}
+
+#project-third-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-text {
@@ -361,8 +391,26 @@ button {
   align-items: center;
 }
 
+#project-first img {
+  width: 30vw;
+  height: auto;
+  margin-top: 5vw;
+}
+
 #project-second img {
   width: 15vw;
+  height: auto;
+  margin: 4px;
+}
+
+#project-third img {
+  width: 10vw;
+  height: auto;
+  margin: 4px;
+}
+
+#project-third #large-image {
+  width: 20vw;
   height: auto;
   margin: 4px;
 }
