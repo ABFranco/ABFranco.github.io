@@ -1,0 +1,27 @@
+
+#about {
+	padding-top: 60px;
+	height: 700px;
+	min-width: 800px;
+}
+
+#about h2 {
+	padding-top: 50px;
+	text-align: left;
+	color: white;
+	font-size: 48px;
+}
+
+#about p {
+	padding-top: 50px;
+	color: white;
+	font-size: 22px;
+	text-align: left;
+}
+
+#about img {
+	margin: auto;
+	display: block;
+	width: 100%;
+	min-width: 500px;
+}
