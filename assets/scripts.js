@@ -124,8 +124,8 @@ $(document).ready(function() {
 
   // projects section buttons hover
   $(".projects-button").mouseover(function() {
-    $(".button-on").removeClass("button-on");
-    $(this).addClass("button-on");
+    $(".button-on-projects").removeClass("button-on-projects");
+    $(this).addClass("button-on-projects");
 
     $(".project-display")
       .stop()
@@ -133,6 +133,14 @@ $(document).ready(function() {
     $(".project-display").removeClass("project-display");
 
     if (
+      $(this).is($("#button-proj5")) &&
+      !$("#project-fifth").hasClass("project-display")
+    ) {
+      $("#project-fifth").addClass("project-display");
+      $("#project-fifth")
+        .stop()
+        .fadeIn(250);
+    } else if (
       $(this).is($("#button-proj1")) &&
       !$("#project-first").hasClass("project-display")
     ) {

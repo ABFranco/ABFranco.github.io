@@ -318,6 +318,15 @@ button {
 }
 
 /*projects */
+.projects-button {
+  height: 9vh;
+  margin-top: 4vh;
+}
+
+.button-on-projects {
+  background-color: #3a405a;
+  transition: 0.25s;
+}
 
 #projects-left {
   display: flex;
@@ -356,6 +365,16 @@ button {
 
 #projects .project-display {
   display: flex;
+}
+
+#project-first .project-text {
+  position: relative;
+  top: 2vw;
+}
+
+#project-second {
+  position: relative;
+  top: 2vw;
 }
 
 #projects #project-third {
@@ -413,6 +432,18 @@ button {
   width: 20vw;
   height: auto;
   margin: 4px;
+}
+
+#project-fifth.project-item {
+  flex-direction: row;
+}
+
+#project-fifth img {
+  width: 30vw;
+  height: auto;
+  margin: 8px;
+  position: relative;
+  top: 2vw;
 }
 
 /* contact */
