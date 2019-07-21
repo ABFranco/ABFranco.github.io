@@ -6,7 +6,7 @@ $(document).ready(function() {
   let contactLeft = document.getElementById("contact-left");
   leftChoose();
 
-  window.addEventListener("scroll", leftChoose);
+  window.addEventListener("scroll", leftChoose, {passive: false});
 
   // left section text change
   function leftChoose() {
@@ -175,7 +175,44 @@ $(document).ready(function() {
     }
   });
 
-  // smooth scroll effct
+  // disable all sources of scrolling (credits to gblazex on Stack Overflow)
+  var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+  // left: 37, up: 38, right: 39, down: 40,
+  // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+  
+
+  function preventDefault(e) {
+    e = e || window.event;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;  
+  }
+
+  function preventDefaultForScrollKeys(e) {
+      if (keys[e.keyCode]) {
+          preventDefault(e);
+          return false;
+      }
+  }
+
+  function overwriteScroll() {
+    // window.onwheel = sectionScroll; // modern standard
+    document.ontouchmove  = sectionScroll; // mobile
+    document.addEventListener ("wheel", sectionScroll, {passive: false});
+    document.onkeydown  = sectionScroll;
+  }
+
+  function disableScroll() {
+    document.ontouchmove  = preventDefault; // mobile
+    document.removeEventListener ("wheel", sectionScroll, {passive: false});
+    document.onkeydown  = preventDefaultForScrollKeys;
+  }
+
+  overwriteScroll();
+  
+
+
+  // smooth scroll effect
 
   $('a[href^="#"]').on("click", function(event) {
     var target = $(this.getAttribute("href"));
@@ -192,22 +229,26 @@ $(document).ready(function() {
     }
   });
 
+  
   // scroll effect credits to Vaibs_Cool on stack overflow
+  
 
   var divs = $(".right-section");
   var dir = "up"; // wheel scroll direction
   var div = 0; // current div
-  $(document.body).on("DOMMouseScroll mousewheel", sectionScroll);
 
   function sectionScroll(e) {
-    $(document.body).off();
-    //console.log(e.originalEvent.detail);
-    //console.log(e.originalEvent.wheelDelta);
-    if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+    preventDefault(e);
+
+    // disable all scroll methods (until animation ends)
+    disableScroll();
+  
+    if (e.detail > 0 || e.wheelDelta < 0 || e.key =="ArrowDown" || e.key =="ArrowRight" || e.key == " ") {
       dir = "down";
-    } else {
+    } else if (e.wheelDelta > 0 || e.key =="ArrowUp" || e.key =="ArrowLeft") {
       dir = "up";
     }
+
     // find currently visible div :
     div = -2;
     divs.each(function(i) {
@@ -225,7 +266,6 @@ $(document).ready(function() {
       div = 4;
     }
 
-    //console.log(div, dir, divs.length, divs.eq(div));
     $("html,body")
       .stop()
       .animate(
@@ -234,18 +274,11 @@ $(document).ready(function() {
         },
         500
       );
+      
 
-    // disable scroll wheel
-    $("body").bind("mousewheel", function() {
-      return false;
-    });
+    
     // delay before enabling scroll wheel
-    setTimeout(addSectionScroll, 1000);
+    setTimeout(overwriteScroll, 550);
     return false;
-  }
-
-  function addSectionScroll() {
-    // enable scroll wheel
-    $(document.body).on("DOMMouseScroll mousewheel", sectionScroll);
   }
 });
