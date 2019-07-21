@@ -20,6 +20,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/scripts.js"></script>
     <script src="assets/rellax.min.js"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    
   </head>
   <body>
     <header id="header">
@@ -39,14 +43,18 @@
       <section class="rellax" data-rellax-speed="-10">
           <section class="background-color"></section>
       </section>
-      <div data-rellax-speed="-10">
-          <img class="rellax" id="logo" data-rellax-speed="5" src="assets/images/logo.svg" />
-          <h1>Antonio Franco</h1>
+      <div id="top-center">
+          <img class="rellax" id="logo" data-rellax-speed="0" src="assets/images/logo.svg" />
+          <h1 id="top-name" data-rellax-speed="10">Antonio Franco</h1>
           <!-- <ul>
               developer<br />
               designer<br />
               innovator
           </ul> -->
+      </div>
+      <div id="top-right" class="rellax">
+        <h2 id="developer">developer</h2>
+        <!-- <h2 id="designer">designer</h2> -->
       </div>
     </div> <!-- .top -->
 

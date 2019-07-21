@@ -51,7 +51,7 @@ header h2 {
   transition: 250ms;
 }
 
-h1:hover, h2:hover {
+header h1:hover, header h2:hover {
   transform: scale(1.1);
   transition: 250ms;
 }
@@ -150,7 +150,11 @@ header div {
   overflow-y: hidden;
 }
 
-.top div {
+.top .rellax {
+  z-index: -1;
+}
+
+.top #top-center {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -181,6 +185,7 @@ header div {
 .top img#logo {
   height: 60vh;
   margin-top: 15vh;
+  position: relative;
 }
 
 .top h1 {
@@ -189,9 +194,19 @@ header div {
 }
 
 
-.right #welcome ul {
-  list-style-type: none;
+.top #top-right {
+  position: fixed;
+  bottom: 50vh;
+  left: 66vw;
+  
 }
+
+.top #top-right h2 {
+  color: white;
+  font-size: 2em;
+  position: fixed;
+}
+
 
 /* about section */
 

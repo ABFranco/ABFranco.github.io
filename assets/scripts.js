@@ -13,7 +13,7 @@ $(document).ready(function() {
     
     var height = window.innerHeight;
 
-    if ($(window).scrollTop() <= height * 1) {
+    if ($(window).scrollTop() < height * 1) {
       $(".left").css("position", "relative");
       $(".left-section").css("position", "static");
       $(".right").css("left", "0");
@@ -23,6 +23,8 @@ $(document).ready(function() {
       $(".left").css("left", "0");
       $(".left-section").css("position", "fixed");
       $(".right").css("left", "33vw");
+
+      $("#top-center").animate({right: '0vw'}, 0);
     }
     var scrollTop = $(window).scrollTop() + window.innerHeight / 3;
     
@@ -179,6 +181,22 @@ $(document).ready(function() {
     }
   });
 
+  // smooth scroll effect
+  $('a[href^="#"]').on("click", function(event) {
+    var target = $(this.getAttribute("href"));
+    if (target.length) {
+      event.preventDefault();
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: target.offset().top
+          },
+          501
+        );
+    }
+  });
+
   // disable all sources of scrolling (credits to gblazex on Stack Overflow)
   var keys = {37: 1, 38: 1, 39: 1, 40: 1};
   // left: 37, up: 38, right: 39, down: 40,
@@ -212,23 +230,6 @@ $(document).ready(function() {
     document.onkeydown  = preventDefaultForScrollKeys;
   }
 
- 
-  
-  // smooth scroll effect
-  $('a[href^="#"]').on("click", function(event) {
-    var target = $(this.getAttribute("href"));
-    if (target.length) {
-      event.preventDefault();
-      $("html, body")
-        .stop()
-        .animate(
-          {
-            scrollTop: target.offset().top
-          },
-          501
-        );
-    }
-  });
 
   document.addEventListener ("wheel", preventDefault, {passive: false});
   overwriteScroll();
@@ -249,6 +250,9 @@ $(document).ready(function() {
       dir = "down";
     } else if (e.wheelDelta > 0 || e.key =="ArrowUp" || e.key =="ArrowLeft") {
       dir = "up";
+    } else {
+      setTimeout(overwriteScroll, 0);
+      return false;
     }
 
     // find currently visible div :
@@ -280,7 +284,7 @@ $(document).ready(function() {
 
     
     // delay before enabling scroll wheel
-    setTimeout(overwriteScroll, 750);
+    setTimeout(overwriteScroll, 1000);
     return false;
   }
 
@@ -294,5 +298,28 @@ $(document).ready(function() {
     vertical: true,
     horizontal: false
   });
+
+  /* scrolling transitions with ScrollReveal */
+  logo_after_reveal = () => {
+    setTimeout(() => {
+      $("#top-center").animate({right: '15vw'}, 1000, 'swing')
+    }, 250);
+    
+  };
+  remove_text = () => {
+    setTimeout(() => {
+      $("#top-right").fadeTo(1000, 0.1);
+      console.log("done")
+    }, 0);
+  };
+
+  ScrollReveal({ reset: true});
+  ScrollReveal().reveal("#logo", {delay: 200, duration: 1000, scale: 0.5})
+  ScrollReveal().reveal("#top-name", {delay: 1000, duration: 750, scale: 1, distance: '50px', origin: 'top', easing: 'ease-in-out', afterReveal: logo_after_reveal});
+
+  ScrollReveal().reveal("#top-right", {delay: 3000, afterReveal: remove_text});
+
+  
+
 
 });
