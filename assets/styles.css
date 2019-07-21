@@ -196,14 +196,16 @@ header div {
 
 .top #top-right {
   position: fixed;
-  bottom: 50vh;
-  left: 66vw;
-  
+  bottom: 55vh;
+  left: 70vw;
+  display: flex;
+  justify-content: center;
 }
 
 .top #top-right h2 {
   color: white;
-  font-size: 2em;
+  font-size: 3em;
+  opacity: 0;
   position: fixed;
 }
 

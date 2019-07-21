@@ -9,80 +9,7 @@ $(document).ready(function() {
   window.addEventListener("scroll", leftChoose, {passive: false});
 
   // left section text change
-  function leftChoose() {
-    
-    var height = window.innerHeight;
-
-    if ($(window).scrollTop() < height * 1) {
-      $(".left").css("position", "relative");
-      $(".left-section").css("position", "static");
-      $(".right").css("left", "0");
-    } else {
-      $(".left").css("position", "fixed");
-      $(".left").css("top", "0");
-      $(".left").css("left", "0");
-      $(".left-section").css("position", "fixed");
-      $(".right").css("left", "33vw");
-
-      $("#top-center").animate({right: '0vw'}, 0);
-    }
-    var scrollTop = $(window).scrollTop() + window.innerHeight / 3;
-    
-    if (
-      scrollTop > height * 0 &&
-      scrollTop <= height * 2 &&
-      !$("#about-left").hasClass("left-show")
-    ) {
-      $(".left-show")
-        .stop()
-        .fadeOut(150);
-      $(".left-show").removeClass("left-show");
-      $("#about-left").addClass("left-show");
-      $("#about-left")
-        .stop()
-        .fadeIn(150);
-    } else if (
-      scrollTop > height * 2 &&
-      scrollTop <= height * 3 &&
-      !$("#skills-left").hasClass("left-show")
-    ) {
-      $(".left-show")
-        .stop()
-        .fadeOut(150);
-      $(".left-show").removeClass("left-show");
-      $("#skills-left").addClass("left-show");
-      $("#skills-left")
-        .stop()
-        .fadeIn(150);
-      $("#skills-left").css("display", "flex");
-    } else if (
-      scrollTop > height * 3 &&
-      scrollTop <= height * 4 &&
-      !$("#projects-left").hasClass("left-show")
-    ) {
-      $(".left-show")
-        .stop()
-        .fadeOut(150);
-      $(".left-show").removeClass("left-show");
-      $("#projects-left").addClass("left-show");
-      $("#projects-left")
-        .stop()
-        .fadeIn(150);
-      $("#projects-left").css("display", "flex");
-    } else if (
-      scrollTop > height * 4 &&
-      !$("#contact-left").hasClass("left-show")
-    ) {
-      $(".left-show")
-        .stop()
-        .fadeOut(150);
-      $(".left-show").removeClass("left-show");
-      $("#contact-left").addClass("left-show");
-      $("#contact-left")
-        .stop()
-        .fadeIn(150);
-    }
-  }
+  
 
   // skills section buttons hover
   $(".skills-button").mouseover(function() {
@@ -301,23 +228,147 @@ $(document).ready(function() {
 
   /* scrolling transitions with ScrollReveal */
   logo_after_reveal = () => {
+    console.log("yes")
     setTimeout(() => {
       $("#top-center").animate({right: '15vw'}, 1000, 'swing')
     }, 250);
     
   };
-  remove_text = () => {
+  
+  top_animate = () => {
+    console.log("added")
+    $(".top-word").show();
+    
+    var anim1 = anime(
+      {targets: '#developer', 
+      loop: true,
+      easing: 'easeInOutSine',
+      direction: 'alternate',
+      duration: 500,
+      delay: 1250,
+      endDelay: 500,
+      opacity: 1,
+      translateY: 25
+    });
+
+
     setTimeout(() => {
-      $("#top-right").fadeTo(1000, 0.1);
-      console.log("done")
-    }, 0);
+      var anim2 = anime(
+        {targets: '#designer', 
+        loop: true,
+        easing: 'easeInOutSine',
+        direction: 'alternate',
+        duration: 500,
+        delay: 1250,
+        endDelay: 500,
+        opacity: 1,
+        translateY: 25
+      });
+      }, 1500);
+
+    setTimeout(() => {
+      var anim3 = anime(
+        {targets: '#innovator', 
+        loop: true,
+        easing: 'easeInOutSine',
+        direction: 'alternate',
+        duration: 500,
+        delay: 1250,
+        endDelay: 500,
+        opacity: 1,
+        translateY: 25
+      });
+    }, 3000);
+
+    
+    
+    
   };
 
   ScrollReveal({ reset: true});
   ScrollReveal().reveal("#logo", {delay: 200, duration: 1000, scale: 0.5})
   ScrollReveal().reveal("#top-name", {delay: 1000, duration: 750, scale: 1, distance: '50px', origin: 'top', easing: 'ease-in-out', afterReveal: logo_after_reveal});
+  ScrollReveal().reveal("#top-right", {delay: 1000, afterReveal: top_animate});
 
-  ScrollReveal().reveal("#top-right", {delay: 3000, afterReveal: remove_text});
+
+
+
+  function leftChoose() {
+    
+    var height = window.innerHeight;
+
+    if ($(window).scrollTop() < height * 1) {
+      $(".left").css("position", "relative");
+      $(".left-section").css("position", "static");
+      $(".right").css("left", "0");
+      setTimeout(() => {$(".top-word").show()}, 5000);
+      
+    } else {
+      $(".left").css("position", "fixed");
+      $(".left").css("top", "0");
+      $(".left").css("left", "0");
+      $(".left-section").css("position", "fixed");
+      $(".right").css("left", "33vw");
+      $("#top-center").animate({right: '0vw'}, 0);
+      $(".top-word").hide();
+    }
+    var scrollTop = $(window).scrollTop() + window.innerHeight / 3;
+    
+    if (
+      scrollTop > height * 0 &&
+      scrollTop <= height * 2 &&
+      !$("#about-left").hasClass("left-show")
+    ) {
+      $(".left-show")
+        .stop()
+        .fadeOut(150);
+      $(".left-show").removeClass("left-show");
+      $("#about-left").addClass("left-show");
+      $("#about-left")
+        .stop()
+        .fadeIn(150);
+    } else if (
+      scrollTop > height * 2 &&
+      scrollTop <= height * 3 &&
+      !$("#skills-left").hasClass("left-show")
+    ) {
+      $(".left-show")
+        .stop()
+        .fadeOut(150);
+      $(".left-show").removeClass("left-show");
+      $("#skills-left").addClass("left-show");
+      $("#skills-left")
+        .stop()
+        .fadeIn(150);
+      $("#skills-left").css("display", "flex");
+    } else if (
+      scrollTop > height * 3 &&
+      scrollTop <= height * 4 &&
+      !$("#projects-left").hasClass("left-show")
+    ) {
+      $(".left-show")
+        .stop()
+        .fadeOut(150);
+      $(".left-show").removeClass("left-show");
+      $("#projects-left").addClass("left-show");
+      $("#projects-left")
+        .stop()
+        .fadeIn(150);
+      $("#projects-left").css("display", "flex");
+    } else if (
+      scrollTop > height * 4 &&
+      !$("#contact-left").hasClass("left-show")
+    ) {
+      $(".left-show")
+        .stop()
+        .fadeOut(150);
+      $(".left-show").removeClass("left-show");
+      $("#contact-left").addClass("left-show");
+      $("#contact-left")
+        .stop()
+        .fadeIn(150);
+    }
+  }
 
   
 
