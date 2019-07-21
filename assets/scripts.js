@@ -228,70 +228,63 @@ $(document).ready(function() {
 
   /* scrolling transitions with ScrollReveal */
   logo_after_reveal = () => {
-    console.log("yes")
     setTimeout(() => {
       $("#top-center").animate({right: '15vw'}, 1000, 'swing')
     }, 250);
-    
+    word_cycle();
   };
   
-  top_animate = () => {
-    console.log("added")
-    $(".top-word").show();
-    
-    var anim1 = anime(
-      {targets: '#developer', 
-      loop: true,
-      easing: 'easeInOutSine',
-      direction: 'alternate',
-      duration: 500,
-      delay: 1250,
-      endDelay: 500,
-      opacity: 1,
-      translateY: 25
-    });
-
-
+  word_cycle = () => {
+    anim1.play();
     setTimeout(() => {
-      var anim2 = anime(
-        {targets: '#designer', 
-        loop: true,
-        easing: 'easeInOutSine',
-        direction: 'alternate',
-        duration: 500,
-        delay: 1250,
-        endDelay: 500,
-        opacity: 1,
-        translateY: 25
-      });
+      anim2.play();
       }, 1500);
 
     setTimeout(() => {
-      var anim3 = anime(
-        {targets: '#innovator', 
-        loop: true,
-        easing: 'easeInOutSine',
-        direction: 'alternate',
-        duration: 500,
-        delay: 1250,
-        endDelay: 500,
-        opacity: 1,
-        translateY: 25
-      });
+      anim3.play();
     }, 3000);
-
-    
-    
-    
   };
+
+  var anim1 = anime(
+    {targets: '#developer', 
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 500,
+    delay: 1250,
+    endDelay: 500,
+    opacity: 1,
+    translateY: 25
+  });
+  var anim2 = anime(
+    {targets: '#designer', 
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 500,
+    delay: 1250,
+    endDelay: 500,
+    opacity: 1,
+    translateY: 25
+  });
+  var anim3 = anime(
+    {targets: '#innovator', 
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 500,
+    delay: 1250,
+    endDelay: 500,
+    opacity: 1,
+    translateY: 25
+  });
+  anim1.pause();
+  anim2.pause();
+  anim3.pause();
 
   ScrollReveal({ reset: true});
   ScrollReveal().reveal("#logo", {delay: 200, duration: 1000, scale: 0.5})
   ScrollReveal().reveal("#top-name", {delay: 1000, duration: 750, scale: 1, distance: '50px', origin: 'top', easing: 'ease-in-out', afterReveal: logo_after_reveal});
-  ScrollReveal().reveal("#top-right", {delay: 1000, afterReveal: top_animate});
-
-
-
 
   function leftChoose() {
     
@@ -300,9 +293,7 @@ $(document).ready(function() {
     if ($(window).scrollTop() < height * 1) {
       $(".left").css("position", "relative");
       $(".left-section").css("position", "static");
-      $(".right").css("left", "0");
-      setTimeout(() => {$(".top-word").show()}, 5000);
-      
+      $(".right").css("left", "0");      
     } else {
       $(".left").css("position", "fixed");
       $(".left").css("top", "0");
@@ -310,7 +301,12 @@ $(document).ready(function() {
       $(".left-section").css("position", "fixed");
       $(".right").css("left", "33vw");
       $("#top-center").animate({right: '0vw'}, 0);
-      $(".top-word").hide();
+      anim1.restart();
+      anim2.restart();
+      anim3.restart();
+      anim1.pause();
+      anim2.pause();
+      anim3.pause();
     }
     var scrollTop = $(window).scrollTop() + window.innerHeight / 3;
     
