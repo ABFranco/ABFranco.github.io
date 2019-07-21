@@ -17,7 +17,6 @@ a {
 body {
   font-family: "Raleway", sans-serif;
   background-color: #dcdcdd;
-  overflow: hidden;
 }
 
 a:visited {
@@ -52,12 +51,7 @@ header h2 {
   transition: 250ms;
 }
 
-header h1:hover {
-  transform: scale(1.1);
-  transition: 250ms;
-}
-
-header h2:hover {
+h1:hover, h2:hover {
   transform: scale(1.1);
   transition: 250ms;
 }
@@ -84,22 +78,37 @@ header div {
 .container {
   display: flex;
   flex-direction: row;
+  z-index: 1;
+  background-color: #dcdcdd;
 }
 
 .left {
-  height: 100vh;
   width: 33vw;
   background-color: #4c5c68;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  height: 100vh;
 }
 
 .left-section {
-  position: fixed;
   display: none;
+  position: static;
+}
+
+.left img {
+  margin: 24px;
+  width: 20vw;
+  height: auto;
+}
+
+.left h1 {
+  margin: 24px;
+  font-weight: 200;
+  font-size: 4vw;
+  color: #dcdcdd;
+  letter-spacing: 0.5vw;
 }
 
 .right {
@@ -119,29 +128,6 @@ header div {
   justify-content: center;
   align-items: center;
 }
-/* Welcome page section*/
-
-.left img {
-  margin: 24px;
-  width: 20vw;
-  height: auto;
-}
-
-.left h1 {
-  margin: 24px;
-  font-weight: 200;
-  font-size: 4vw;
-  color: #dcdcdd;
-  letter-spacing: 0.5vw;
-}
-
-.right-section #welcome-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20vh;
-}
 
 .right h1 {
   font-size: 3.5vw;
@@ -156,10 +142,55 @@ header div {
   text-align: center;
 }
 
-.right #welcome img {
-  width: 18vw;
-  height: auto;
-  border-radius: 50%;
+/* Welcome page top */
+
+.top#welcome {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.top div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+}
+
+.top section.rellax {
+  
+  background-image: url("images/succulent.jpg");
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  
+}
+
+.top section.background-color {
+  background-color: rgba(14, 14, 14, 0.6);
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  position: fixed;
+}
+
+.top img#logo {
+  height: 60vh;
+  margin-top: 15vh;
+}
+
+.top h1 {
+  color: white;
+  margin-top: 5vh;
+}
+
+
+.right #welcome ul {
+  list-style-type: none;
 }
 
 /* about section */

@@ -10,20 +10,24 @@ $(document).ready(function() {
 
   // left section text change
   function leftChoose() {
-    var scrollTop = $(window).scrollTop() + window.innerHeight / 3;
+    
     var height = window.innerHeight;
 
-    if (scrollTop <= height * 1 && !$("#welcome-left").hasClass("left-show")) {
-      $(".left-show")
-        .stop()
-        .fadeOut(150);
-      $(".left-show").removeClass("left-show");
-      $("#welcome-left").addClass("left-show");
-      $("#welcome-left")
-        .stop()
-        .fadeIn(150);
-    } else if (
-      scrollTop > height * 1 &&
+    if ($(window).scrollTop() <= height * 1) {
+      $(".left").css("position", "relative");
+      $(".left-section").css("position", "static");
+      $(".right").css("left", "0");
+    } else {
+      $(".left").css("position", "fixed");
+      $(".left").css("top", "0");
+      $(".left").css("left", "0");
+      $(".left-section").css("position", "fixed");
+      $(".right").css("left", "33vw");
+    }
+    var scrollTop = $(window).scrollTop() + window.innerHeight / 3;
+    
+    if (
+      scrollTop > height * 0 &&
       scrollTop <= height * 2 &&
       !$("#about-left").hasClass("left-show")
     ) {
@@ -208,12 +212,9 @@ $(document).ready(function() {
     document.onkeydown  = preventDefaultForScrollKeys;
   }
 
-  overwriteScroll();
+ 
   
-
-
   // smooth scroll effect
-
   $('a[href^="#"]').on("click", function(event) {
     var target = $(this.getAttribute("href"));
     if (target.length) {
@@ -229,10 +230,11 @@ $(document).ready(function() {
     }
   });
 
-  
+  document.addEventListener ("wheel", preventDefault, {passive: false});
+  overwriteScroll();
+
   // scroll effect credits to Vaibs_Cool on stack overflow
   
-
   var divs = $(".right-section");
   var dir = "up"; // wheel scroll direction
   var div = 0; // current div
@@ -278,7 +280,19 @@ $(document).ready(function() {
 
     
     // delay before enabling scroll wheel
-    setTimeout(overwriteScroll, 550);
+    setTimeout(overwriteScroll, 750);
     return false;
   }
+
+
+  /* parallax effect with rellax.js */
+  var rellax = new Rellax('.rellax', {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+
 });

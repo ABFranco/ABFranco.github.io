@@ -19,6 +19,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/scripts.js"></script>
+    <script src="assets/rellax.min.js"></script>
   </head>
   <body>
     <header id="header">
@@ -34,12 +35,23 @@
       </div>
     </header>
 
+    <div class="top right-section" id="welcome"> <!-- .top -->
+      <section class="rellax" data-rellax-speed="-10">
+          <section class="background-color"></section>
+      </section>
+      <div data-rellax-speed="-10">
+          <img class="rellax" id="logo" data-rellax-speed="5" src="assets/images/logo.svg" />
+          <h1>Antonio Franco</h1>
+          <!-- <ul>
+              developer<br />
+              designer<br />
+              innovator
+          </ul> -->
+      </div>
+    </div> <!-- .top -->
+
     <div class="container">
       <div class="left"> <!-- .left -->
-        <div class="left-section" id="welcome-left">
-          <!-- <img src="assets/images/logo.svg" />
-          <h1>Welcome!</h1> -->
-        </div>
 
         <div class="left-section" id="about-left"> <!-- .left-section --> 
           <h1>about me</h1>
@@ -72,32 +84,18 @@
           </button>
         </div> <!-- .left-section -->
 
-        <div class="left-section" id="contact-left"><h1>Contact me!</h1></div>
+        <div class="left-section" id="contact-left"><h1>Contact me!</h1></div> <!-- .left-section -->
+
       </div> <!-- .left -->
 
       <div class="right"> <!-- .right -->
-        <div class="right-section" id="welcome"> <!-- .right-section -->
-          <div id="welcome-top">
-            <img id="self-pic" src="assets/images/self-pic.jpg" width="250px" />
-            <h1>My name is <br />Antonio Franco.</h1>
-          </div>
-          <p>
-            4th year student studying<br /><b>Computer Science</b> at UC
-            Berkeley
-          </p>
-        </div> <!-- .right-section -->
 
         <div class="right-section" id="about"> <!-- .right-section -->
           <div id="about-row">
-            <h1>
-              developer.<br />
-              designer.<br />
-              innovator.
-            </h1>
             <img id="self-pic" src="assets/images/about_me.jpg" width="250px" />
           </div>
           <p id="about-me">
-            I am currently a 4th year student studying Computer Science in UC
+            I am currently a recent graduate who studied Computer Science in UC
             Berkeley’s Engineering department. Developing software with
             meaningful goals is a field of work I plan to take part in. The
             creative process needed in order to construct products that
