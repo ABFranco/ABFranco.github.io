@@ -229,6 +229,7 @@ $(document).ready(function() {
   /* scrolling transitions with ScrollReveal */
   
   word_cycle = () => {
+    console.log("test")
     anim1.play();
     setTimeout(() => {
       anim2.play();
@@ -295,12 +296,12 @@ $(document).ready(function() {
       $(".left").css("left", "0");
       $(".left-section").css("position", "fixed");
       $(".right").css("left", "33vw");
-      anim1.restart();
-      anim2.restart();
-      anim3.restart();
-      anim1.pause();
-      anim2.pause();
-      anim3.pause();
+      // anim1.restart();
+      // anim2.restart();
+      // anim3.restart();
+      // anim1.pause();
+      // anim2.pause();
+      // anim3.pause();
     }
     var scrollTop = $(window).scrollTop() + window.innerHeight / 3;
     
