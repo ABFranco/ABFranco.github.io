@@ -227,12 +227,6 @@ $(document).ready(function() {
   });
 
   /* scrolling transitions with ScrollReveal */
-  logo_after_reveal = () => {
-    setTimeout(() => {
-      $("#top-center").animate({right: '15vw'}, 1000, 'swing')
-    }, 250);
-    word_cycle();
-  };
   
   word_cycle = () => {
     anim1.play();
@@ -254,7 +248,7 @@ $(document).ready(function() {
     delay: 1250,
     endDelay: 500,
     opacity: 1,
-    translateY: 25
+    translateX: 25
   });
   var anim2 = anime(
     {targets: '#designer', 
@@ -265,7 +259,7 @@ $(document).ready(function() {
     delay: 1250,
     endDelay: 500,
     opacity: 1,
-    translateY: 25
+    translateX: 25
   });
   var anim3 = anime(
     {targets: '#innovator', 
@@ -276,15 +270,16 @@ $(document).ready(function() {
     delay: 1250,
     endDelay: 500,
     opacity: 1,
-    translateY: 25
+    translateX: 25
   });
   anim1.pause();
   anim2.pause();
   anim3.pause();
 
   ScrollReveal({ reset: true});
+  ScrollReveal().reveal("#top-right", {afterReveal: word_cycle})
   ScrollReveal().reveal("#logo", {delay: 200, duration: 1000, scale: 0.5})
-  ScrollReveal().reveal("#top-name", {delay: 1000, duration: 750, scale: 1, distance: '50px', origin: 'top', easing: 'ease-in-out', afterReveal: logo_after_reveal});
+  ScrollReveal().reveal("#top-name", {delay: 1000, duration: 750, scale: 1, distance: '50px', origin: 'top', easing: 'ease-in-out'});
 
   function leftChoose() {
     
@@ -300,7 +295,6 @@ $(document).ready(function() {
       $(".left").css("left", "0");
       $(".left-section").css("position", "fixed");
       $(".right").css("left", "33vw");
-      $("#top-center").animate({right: '0vw'}, 0);
       anim1.restart();
       anim2.restart();
       anim3.restart();
