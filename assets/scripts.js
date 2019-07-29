@@ -67,42 +67,42 @@ $(document).ready(function() {
 
     if (
       $(this).is($("#button-proj5")) &&
-      !$("#project-fifth").hasClass("project-display")
+      !$("#project-5").hasClass("project-display")
     ) {
-      $("#project-fifth").addClass("project-display");
-      $("#project-fifth")
+      $("#project-5").addClass("project-display");
+      $("#project-5")
         .stop()
         .fadeIn(250);
     } else if (
       $(this).is($("#button-proj1")) &&
-      !$("#project-first").hasClass("project-display")
+      !$("#project-1").hasClass("project-display")
     ) {
-      $("#project-first").addClass("project-display");
-      $("#project-first")
+      $("#project-1").addClass("project-display");
+      $("#project-1")
         .stop()
         .fadeIn(250);
     } else if (
       $(this).is($("#button-proj2")) &&
-      !$("#project-second").hasClass("project-display")
+      !$("#project-2").hasClass("project-display")
     ) {
-      $("#project-second").addClass("project-display");
-      $("#project-second")
+      $("#project-2").addClass("project-display");
+      $("#project-2")
         .stop()
         .fadeIn(250);
     } else if (
       $(this).is($("#button-proj3")) &&
-      !$("#project-third").hasClass("project-display")
+      !$("#project-3").hasClass("project-display")
     ) {
-      $("#project-third").addClass("project-display");
-      $("#project-third")
+      $("#project-3").addClass("project-display");
+      $("#project-3")
         .stop()
         .fadeIn(250);
     } else if (
       $(this).is($("#button-proj4")) &&
-      !$("#project-fourth").hasClass("project-display")
+      !$("#project-4").hasClass("project-display")
     ) {
-      $("#project-fourth").addClass("project-display");
-      $("#project-fourth")
+      $("#project-4").addClass("project-display");
+      $("#project-4")
         .stop()
         .fadeIn(250);
     }
@@ -335,6 +335,20 @@ $(document).ready(function() {
     } else if (
       scrollTop > height * 3 &&
       scrollTop <= height * 4 &&
+      !$("#experience-left").hasClass("left-show")
+    ) {
+      $(".left-show")
+        .stop()
+        .fadeOut(150);
+      $(".left-show").removeClass("left-show");
+      $("#experience-left").addClass("left-show");
+      $("#experience-left")
+        .stop()
+        .fadeIn(150);
+      $("#experience-left").css("display", "flex");
+    } else if (
+      scrollTop > height * 4 &&
+      scrollTop <= height * 5 &&
       !$("#projects-left").hasClass("left-show")
     ) {
       $(".left-show")
@@ -347,7 +361,7 @@ $(document).ready(function() {
         .fadeIn(150);
       $("#projects-left").css("display", "flex");
     } else if (
-      scrollTop > height * 4 &&
+      scrollTop > height * 5 &&
       !$("#contact-left").hasClass("left-show")
     ) {
       $(".left-show")

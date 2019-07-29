@@ -34,6 +34,7 @@
       <div id="shortcuts">
         <a href="#about"><h2>about</h2></a>
         <a href="#skills"><h2>skills</h2></a>
+        <a href="#experience"><h2>experience</h2></a>
         <a href="#projects"><h2>projects</h2></a>
         <a href="#contact"><h2>contact</h2></a>
         <a href="resume.pdf" target="_blank"><h2>resume</h2></a>
@@ -75,17 +76,21 @@
           </button>
         </div> <!-- .left-section -->
 
+        <div class="left-section" id="experience-left"> <!-- .left-section --> 
+          <h1>experience</h1>
+        </div> <!-- .left-section -->
+
         <div class="left-section" id="projects-left"> <!-- .left-section -->
           <h1>Projects</h1>
           <button class="projects-button button-on-projects" id="button-proj5">
+              Innovation Resource Database
+            </button>
+          <button class="projects-button" id="button-proj4">
             FreeWheel
           </button>
-          <button class="projects-button" id="button-proj1">SynchoShare</button>
-          <button class="projects-button" id="button-proj2">
-            Music Sharer
-          </button>
-          <button class="projects-button" id="button-proj3">Text Editor</button>
-          <button class="projects-button" id="button-proj4">
+          <button class="projects-button" id="button-proj3">SynchoShare</button>
+          <button class="projects-button" id="button-proj2">Text Editor</button>
+          <button class="projects-button" id="button-proj1">
             This Website
           </button>
         </div> <!-- .left-section -->
@@ -104,7 +109,7 @@
           <p id="about-me">
             My name is Antonio, and I am currently a recent graduate who studied Computer Science in UC Berkeley’s Engineering department.
           </br></br>
-            I love programming, especially with its blend of problem solving, creativity, and design. I see coding as an art, a means for me to expxress my creativity. My passions mainly include web development, software engineering, and UX design. I aim for personal growth every day and I hope to learn new technologies and languages in the rapidly changing world of tech.
+            I love programming, especially with its blend of problem solving, creativity, and design. I see coding as an art, a means for me to express my creativity. My passions mainly include web development, software engineering, and UX design. I aim for personal growth every day and I hope to learn new technologies and languages in the rapidly changing world of tech.
           </p>
         </div> <!-- .right-section -->
 
@@ -240,9 +245,63 @@
           </div>
         </div> <!-- .right-section -->
 
+        <div class="right-section" id="experience"> <!-- .right-section -->
+          <h2 id="citris-header">
+              CITRIS and the Banatao Institute
+          </h2>
+          <h3>
+            Web Developer Intern
+          </h3>
+          <div id="experience-row">
+              <img id="citris" src="assets/images/experience/CITRIS.png" width="250px" />
+              <img src="assets/images/experience/WITI.png" width="150px" />
+            </div>
+          <div id="experience-row">
+            <p id="citris-desc">
+                During the summer of 2019, I interned as a web developer for the Center for Information Technology Research in the Interest of Society (CITRIS), which is one of UC Berkeley's engineering research centers. Specifically, I worked between CITRIS's communications department and CITRIS's Women in Tech Initiative, a "Research Thrust" in CITRIS. 
+                </br></br>
+                I had three primary projects during my internship: maintain, improve, and bugfix <a href="https://citris-uc.org/" target="_blank">the main CITRIS website</a>, redesign the <a href="https://witi.berkeley.edu/" target="_blank">WITI@UC website</a>, and continue work on the <a href="http://innovationresourcedatabase.herokuapp.com/resources.html/" target="_blank">Innovation Research Database</a>.
+            </p>
+          </div>
+          
+        </div> <!-- .right-section -->
+
         <div class="right-section" id="projects">
           <div class="carousel">
-            <div class="project-item" id="project-first">
+              <div class="project-item project-display" id="project-5">
+                <div class="project-text">
+                  <h2>Innovation Resource Database</h2>
+                  <p>
+                    The Innovation Resource Database is a collaborative database that also has API capabilities to access and edit it. Coded with Ruby on Rails back-end and React/JavaScript front-end, my team of 6 utilized Agile practices to efficiently complete user stories and fulfill our client's needs. 
+                  </br></br>
+                  This is still an ongoing project, and more info about it can be found on our <a href="https://github.com/saasbook/lime" target="_blank">GitHub page</a>. Its current state as a web app can be found <a href="http://innovationresourcedatabase.herokuapp.com/resources.html/" target="_blank">here</a>.
+                  </p>
+                </div>
+                <a href="http://innovationresourcedatabase.herokuapp.com/resources.html/" target="_blank"><img src="assets/images/database.png" alt="database_img"/></a>
+              </div><!-- project-5 -->
+
+              <div class="project-item" id="project-4">
+                <div class="project-text" id="project-4-text">
+                  <h2>FreeWheel</h2>
+                  <p>
+                    FreeWheel is an Android application developed in a team of 5
+                    as a class final project. The app had a target audience of
+                    users with mobile disabilities, such as wheelchair users, and
+                    assisted them to find public transportation methods. I was the
+                    primary Front-End programmer as well as implement Google's
+                    Maps, Places, and Directions APIs. During the project, we had
+                    to conduct user interviews, rapidly prototype, code, and
+                    eventually present our project in a public showcase. <br />
+                    <br />
+                    To the right is our team's showcase poster.
+                  </p>
+                </div>
+                <div class="project-4-image">
+                  <img src="assets/images/freewheel.png" />
+                </div>
+              </div><!-- project-4 -->
+
+            <div class="project-item" id="project-3">
               <div class="project-text">
                 <h2>SynchoShare</h2>
                 <p>
@@ -255,50 +314,12 @@
                 </p>
               </div>
               <img src="assets/images/synchoshare.png" alt="synchoshare_img" />
-            </div>
+            </div><!-- project-3 -->
 
-            <div class="project-item" id="project-second">
-              <div id="project-second-images">
-                <div class="project-second-row">
-                  <img
-                    src="assets/images/musicsharer/signup.PNG"
-                    alt="musicsharer_img"
-                  />
-
-                  <img
-                    src="assets/images/musicsharer/music.PNG"
-                    alt="musicsharer_img"
-                  />
-                </div>
-                <div class="project-second-row">
-                  <img
-                    src="assets/images/musicsharer/account.PNG"
-                    alt="musicsharer_img"
-                  />
-
-                  <img
-                    src="assets/images/musicsharer/edit.PNG"
-                    alt="musicsharer_img"
-                  />
-                </div>
-              </div>
-
-              <div class="project-text">
-                <h2>Music Sharer</h2>
-                <p>
-                  Personal project using PHP. <br />
-                  After registring an account, the user can upload audio files
-                  to the server and play back the audio from any device. <br />
-                  Other functionality includes editing account details when
-                  logged in.
-                </p>
-              </div>
-            </div>
-
-            <div class="project-item" id="project-third">
+            <div class="project-item" id="project-2">
               <img src="assets/images/editor/example.gif" id="large-image" />
-              <div id="project-third-right">
-                <div id="project-third-text">
+              <div id="project-2-right">
+                <div id="project-2-text">
                   <h2>Text Editor</h2>
                   <p>
                     Class software project developed with Java. Text input would
@@ -308,16 +329,16 @@
                   </p>
                 </div>
 
-                <div id="project-third-images">
+                <div id="project-2-images">
                   <img src="assets/images/editor/word_wrap.png" alt="test" />
                   <img src="assets/images/editor/zoom_in.PNG" alt="test" />
                   <img src="assets/images/editor/zoom_out.png" alt="test" />
                 </div>
               </div>
-            </div>
+            </div> <!-- project-2 -->
 
-            <div class="project-item" id="project-fourth">
-              <div class="project-text" id="project-fourth-text">
+            <div class="project-item" id="project-1">
+              <div class="project-text" id="project-1-text">
                 <h2>This Website</h2>
                 <p>
                   I personally created this website using mainly HTML and CSS as
@@ -327,26 +348,7 @@
               </div>
             </div>
 
-            <div class="project-item project-display" id="project-fifth">
-              <div class="project-text" id="project-fifth-text">
-                <h2>FreeWheel</h2>
-                <p>
-                  FreeWheel is an Android application developed in a team of 5
-                  as a class final project. The app had a target audience of
-                  users with mobile disabilities, such as wheelchair users, and
-                  assisted them to find public transportation methods. I was the
-                  primary Front-End programmer as well as implement Google's
-                  Maps, Places, and Directions APIs. During the project, we had
-                  to conduct user interviews, rapidly prototype, code, and
-                  eventually present our project in a public showcase. <br />
-                  <br />
-                  To the right is our team's showcase poster.
-                </p>
-              </div>
-              <div class="project-fifth-image">
-                <img src="assets/images/freewheel.png" />
-              </div>
-            </div>
+            
           </div>
         </div> <!-- .right-section -->
 
