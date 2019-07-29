@@ -229,7 +229,6 @@ $(document).ready(function() {
   /* scrolling transitions with ScrollReveal */
   
   word_cycle = () => {
-    console.log("test")
     anim1.play();
     setTimeout(() => {
       anim2.play();
