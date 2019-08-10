@@ -240,28 +240,6 @@ $(document).ready(function() {
   // };
 
   
-  var animate1 = () => {
-    $('#developer').textillate({ in: { delay: 25, effect: 'fadeInLeft' }, out: { delayScale: 1, delay: 25, effect: 'fadeOutRight', callback: animate2} });
-    $('#developer').textillate('in');
-    setTimeout(() => {
-      $('#developer').textillate('out');
-      }, 1500);
-  };
-  var animate2 = () => {
-    $('#designer').textillate({ in: { delay: 25, effect: 'fadeInLeft'}, out: { delayScale: 1, delay: 25, effect: 'fadeOutRight', callback: animate3 } });
-    $('#designer').textillate('in');
-    setTimeout(() => {
-      $('#designer').textillate('out');
-      }, 1500);
-  };
-  var animate3 = () => {
-    $('#innovator').textillate({ in: { delay: 25, effect: 'fadeInLeft' }, out: { delayScale: 1, delay: 25, effect: 'fadeOutRight', callback: animate1} });
-    $('#innovator').textillate('in');
-    setTimeout(() => {
-      $('#innovator').textillate('out');
-      }, 1500);
-  };
-  animate1();
 
   ScrollReveal({ reset: true});
   // ScrollReveal().reveal("#top-right", {afterReveal: word_cycle})
