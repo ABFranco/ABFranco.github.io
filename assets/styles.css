@@ -419,6 +419,28 @@ button {
 
 /* experience */
 
+
+#experience-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: none;
+}
+
+.experience-display {
+  display: block;
+}
+
 #experience-row {
   display: flex;
   flex-direction: row;
@@ -441,6 +463,13 @@ button {
   font-weight: 400;
 }
 
+#experience h4 {
+  text-align: center;
+  font-size: 1vw;
+  margin: 1vh 0vh 1vh 0vh;
+  font-weight: 400;
+}
+
 #experience p {
   font-size: 1.2vw;
   margin: 24px auto;
@@ -450,13 +479,15 @@ button {
   font-family: "Open Sans", sans-serif;
 }
 
-#experience a {
-  font-weight: 800;
-}
 
 #experience img {
   object-fit: contain;
-  margin: 0px 2vw;
+  margin: auto 2vw;
+}
+
+.button-on-experience {
+  background-color: #3a405a;
+  transition: 0.25s;
 }
 
 
@@ -478,6 +509,7 @@ button {
   align-items: center;
   display: none;
 }
+
 #projects {
   margin: 2vw;
 }

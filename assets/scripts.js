@@ -20,6 +20,7 @@ $(document).ready(function() {
       .stop()
       .fadeOut(250);
     $(".skill-display").removeClass("skill-display");
+
     if (
       $(this).is($("#button-prog")) &&
       !$("#section-prog").hasClass("skill-display")
@@ -50,6 +51,35 @@ $(document).ready(function() {
     ) {
       $("#section-other").addClass("skill-display");
       $("#section-other")
+        .stop()
+        .fadeIn(250);
+    }
+  });
+
+  // experience section buttons hover
+  $(".experience-button").mouseover(function() {
+    $(".button-on-experience").removeClass("button-on-experience");
+    $(this).addClass("button-on-experience");
+
+    $(".experience-display")
+      .stop()
+      .fadeOut(250);
+    $(".experience-display").removeClass("experience-display");
+
+    if (
+      $(this).is($("#button-ia")) &&
+      !$("#experience-ia").hasClass("experience-display")
+    ) {
+      $("#experience-ia").addClass("experience-display");
+      $("#experience-ia")
+        .stop()
+        .fadeIn(250);
+    } else if (
+      $(this).is($("#button-citris")) &&
+      !$("#experience-citris").hasClass("experience-display")
+    ) {
+      $("#experience-citris").addClass("experience-display");
+      $("#experience-citris")
         .stop()
         .fadeIn(250);
     }
@@ -247,7 +277,10 @@ $(document).ready(function() {
   ScrollReveal().reveal("#top-name", {delay: 1000, duration: 750, scale: 1, distance: '50px', origin: 'top', easing: 'ease-in-out'});
 
   function leftChoose() {
-    
+    /*
+    When the user scrolls, determine what section to display.
+
+    */
     var height = window.innerHeight;
 
     if ($(window).scrollTop() < height * 1) {
