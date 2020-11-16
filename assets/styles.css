@@ -490,6 +490,10 @@ button {
   transition: 0.25s;
 }
 
+#experience-citris p {
+  font-size: 1.75vh;
+}
+
 
 /*projects */
 .projects-button {
