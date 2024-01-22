@@ -1,6 +1,6 @@
-import './App.css';
-import Home from './pages/Home';
-import NavigationBar from './components/NavigationBar';
+import "./App.css";
+import Home from "./pages/Home";
+import NavigationBar from "./components/NavigationBar";
 
 const App = () => {
   return (
@@ -16,6 +16,6 @@ const App = () => {
       </footer>
     </div>
   );
-}
+};
 
 export default App;
