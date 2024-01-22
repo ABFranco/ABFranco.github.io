@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
 import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -11,9 +12,7 @@ const App = () => {
       <main>
         <Home />
       </main>
-      <footer>
-        <p>© {new Date().getFullYear()} Antonio Franco</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
