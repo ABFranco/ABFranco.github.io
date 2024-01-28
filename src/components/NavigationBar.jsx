@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,9 +15,11 @@ import ListItemText from '@mui/material/ListItemText';
 import Hidden from '@mui/material/Hidden';
 import { useMediaQuery } from '@mui/material';
 
+
 const NavigationBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isMobile = useMediaQuery('(max-width:800px)'); // Adjust the breakpoint as needed
+  const isMobile = useMediaQuery('(max-width:800px)'); // screen size breakpoint for mobile
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -32,7 +36,7 @@ const NavigationBar = () => {
   const drawer = (
     <List>
       {menuItems.map((item, index) => (
-        <ListItem button key={index}>
+        <ListItem button key={index} onClick={() => navigate(item.link)}>
           <ListItemText primary={item.text} />
         </ListItem>
       ))}
@@ -56,7 +60,9 @@ const NavigationBar = () => {
           {!isMobile && (
             // Display text buttons for larger screens
             menuItems.map((item, index) => (
-              <ListItemText className="nav-bar-item" primary={item.text} key={index} />
+              <Link to={item.link} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <ListItemText className="nav-bar-item" primary={item.text} />
+              </Link>
             ))
           )}
         </Toolbar>

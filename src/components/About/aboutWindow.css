@@ -5,7 +5,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    height: 400px;
+    /* height: auto; */
     width: 800px;
 }
 
@@ -14,7 +14,6 @@
   flex-direction: row;
   background: #b4b4b4;
   opacity: 0.9;
-  margin: 0px 0px 20px;
   padding: 10px;
   border-radius: 7px 7px 0px 0px;
 }
@@ -29,7 +28,7 @@
 
 
 .dot {
-  cursor: pointer;
+  cursor: default;
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -55,5 +54,12 @@
 }
 
 .about-content {
-  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content p {
+  padding: 12px;
+  text-align: start;
 }

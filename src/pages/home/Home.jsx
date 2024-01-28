@@ -7,14 +7,15 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import SelfPic from "./../../assets/images/self_pic.png";
 import "./home.css";
+import { Typography } from "@mui/material";
 
 const Home = () => {
   return (
     <div className="home-container">
       <div className="home-top-content">
         <div className="home-text">
-          <h1>Hello! I'm Antonio. 👋🏽</h1>
-          <h2>Software Engineer and Running Enthusiast.</h2>
+          <Typography variant="h1">Hello! I'm Antonio. 👋🏽</Typography>
+          <Typography variant="h3">Software Engineer and Running Enthusiast.</Typography>
         </div>
         <div className="home-img">
           <img id="self-pic" src={SelfPic} width="250px" />
