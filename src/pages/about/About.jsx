@@ -1,5 +1,5 @@
 import React from "react";
-import AboutWindow from "../../components/About/AboutWindow";
+import AboutWindow from "../../components/aboutWindow/AboutWindow";
 import "./about.css";
 
 const About = () => {
