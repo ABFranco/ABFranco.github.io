@@ -22,13 +22,25 @@
   border-radius: 50%;
 }
 
-/* Common styles for social buttons */
+.home-icons {
+  display: flex;
+}
+
 .social-button {
-  display: inline-block;
   margin: 0.5rem;
-  text-decoration: none;
-  color: #3f3f3f; /* Default color */
+  color: #3f3f3f;
   font-size: 2rem;
+  transition: transform 0.15s ease, margin 0.15s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.25);
+  margin-left: 0.65rem;
+  margin-right: 0.65rem;
+}
+
+.social-button:not(:hover) {
+  transition: transform 0.15s ease, margin 0.15s ease;
 }
 
 .linkedin {
