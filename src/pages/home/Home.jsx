@@ -5,7 +5,7 @@ import {
   faGithub,
   faStrava,
 } from "@fortawesome/free-brands-svg-icons";
-import SelfPic from "./../../assets/images/self_pic.png";
+import SelfPic from "./../../assets/images/self_pic.jpg";
 import "./home.css";
 import { Typography } from "@mui/material";
 
