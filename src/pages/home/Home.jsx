@@ -15,7 +15,7 @@ const Home = () => {
       <div className="home-top-content">
         <div className="home-text">
           <Typography variant="h1">Hello! I'm Antonio. 👋🏽</Typography>
-          <Typography variant="h3">Software Engineer and Running Enthusiast.</Typography>
+          <Typography variant="h3">Full Stack Software Engineer</Typography>
         </div>
         <div className="home-img">
           <img id="self-pic" src={SelfPic} width="250px" />

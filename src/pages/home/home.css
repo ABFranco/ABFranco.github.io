@@ -1,15 +1,9 @@
-#self-pic {
-  margin: 24px;
-  width: 20vw;
-  height: auto;
-  border-radius: 50%;
-}
-
 .home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 75vh;
 }
 
 .home-top-content {
@@ -19,6 +13,13 @@
   align-items: center;
   gap: 5vw;
   margin: 5vh 5vw;
+}
+
+#self-pic {
+  margin: 24px;
+  width: 20vw;
+  height: auto;
+  border-radius: 50%;
 }
 
 /* Common styles for social buttons */
@@ -52,7 +53,7 @@
 
 /* Mobile-specific styles */
 @media screen and (max-width: 768px) {
-  .home-container {
+  .home-top-content {
     flex-direction: column;
   }
 
