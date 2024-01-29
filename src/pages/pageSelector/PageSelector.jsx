@@ -46,7 +46,7 @@ const PageSelector = () => {
   return (
     <>
       <header>
-        <NavigationBar location={location} handlePageSwitch={handlePageSwitch} />
+        <NavigationBar locationPath={location?.pathname} handlePageSwitch={handlePageSwitch} />
       </header>
       <main>
         <Routes>
