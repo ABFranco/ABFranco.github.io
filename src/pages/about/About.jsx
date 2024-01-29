@@ -7,10 +7,10 @@ const About = ({aboutIsVisible}) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    if (!aboutIsVisible) {
-      console.log("About useEffect called to set to false")
-      setIsVisible(false);
-    }
+    // if (!aboutIsVisible) {
+    //   setIsVisible(false);
+    // }
+    setIsVisible(aboutIsVisible);
   }, [aboutIsVisible]);
 
   return (

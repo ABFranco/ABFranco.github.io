@@ -14,10 +14,10 @@ const Home = ({homeIsVisible}) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    if (!homeIsVisible) {
-      console.log("Home useEffect called to set to false")
-      setIsVisible(false);
-    }
+    // if (!homeIsVisible) {
+    //   setIsVisible(false);
+    // }
+    setIsVisible(homeIsVisible);
   }, [homeIsVisible]);
 
   return (

@@ -4,15 +4,14 @@ import { Typography } from "@mui/material";
 
 const AboutWindow = () => {
   return (
-    // TODO: have this window fade in with a transition upon page load
-    <div class="about-window">
-      <div class="window-bar">
-        <div class="dot red"></div>
-        <div class="dot amber"></div>
-        <div class="dot green"></div>
+    <div className="about-window">
+      <div className="window-bar">
+        <div className="dot red"></div>
+        <div className="dot amber"></div>
+        <div className="dot green"></div>
       </div>
 
-      <div class="about-content">
+      <div className="about-content">
         <Typography variant="body1">
           My name is Antonio, and I am currently a Software Engineer at Hall Capital Partners. Previously, I worked at Inductive Automation and CITRIS @ UC Berkeley. My academic background includes studying Computer Science in UC Berkeley's Engineering department.
         </Typography>

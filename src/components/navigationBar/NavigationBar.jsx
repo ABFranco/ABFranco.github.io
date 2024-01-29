@@ -12,10 +12,9 @@ import ListItemText from "@mui/material/ListItemText";
 import { useMediaQuery } from "@mui/material";
 import "./navigationBar.css";
 
-const NavigationBar = ({handlePageSwitch}) => {
+const NavigationBar = ({location, handlePageSwitch}) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width:800px)"); // screen size breakpoint for mobile
-  const [currentPage, setCurrentPage] = useState("/");
   const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
@@ -30,14 +29,13 @@ const NavigationBar = ({handlePageSwitch}) => {
   ];
 
   const handleNavigation = (link) => {
-    if (link === currentPage) {
+    if (link === location?.pathname) {
       return;
     }
-    handlePageSwitch(currentPage, link);
+    handlePageSwitch(location?.pathname, link);
 
     setTimeout(() => {
       // delay for exit transition before navigating to new page
-      setCurrentPage(link);
       navigate(link)
     }, 500);
   };
