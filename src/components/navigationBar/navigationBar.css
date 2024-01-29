@@ -1,3 +1,7 @@
 .navigation-bar span {
     color: #ffffff;
 }
+
+.navigation-bar .nav-bar-item {
+    cursor: pointer;
+}
