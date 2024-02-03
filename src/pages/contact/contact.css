@@ -1,0 +1,12 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.contact-text .email-text {
+  cursor: pointer;
+  font-weight: 600;
+}

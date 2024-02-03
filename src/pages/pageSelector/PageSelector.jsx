@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "../home/Home.jsx";
 import About from "../about/About.jsx";
+import Contact from "../contact/Contact.jsx";
 import NavigationBar from "../../components/navigationBar/NavigationBar.jsx";
 
 const PageSelector = () => {
@@ -15,12 +16,16 @@ const PageSelector = () => {
   const navigate = useNavigate();
   const [homeIsVisible, setHomeIsVisible] = useState(false);
   const [aboutIsVisible, setAboutIsVisible] = useState(false);
+  const [contactIsVisible, setContactIsVisible] = useState(false);
 
   // check which page to display upon initial load
   useEffect(() => {
     switch (location?.pathname) {
       case "/about":
         setAboutIsVisible(true);
+        break;
+      case "/contact":
+        setContactIsVisible(true);
         break;
       default:
         setHomeIsVisible(true);
@@ -45,6 +50,9 @@ const PageSelector = () => {
       case "/about":
         setAboutIsVisible(false);
         break;
+      case "/contact":
+        setContactIsVisible(false);
+        break;
       default:
         setHomeIsVisible(false);
     }
@@ -52,6 +60,9 @@ const PageSelector = () => {
     switch (newPage) {
       case "/about":
         setAboutIsVisible(true);
+        break;
+      case "/contact":
+        setContactIsVisible(true);
         break;
       default:
         setHomeIsVisible(true);
@@ -74,6 +85,10 @@ const PageSelector = () => {
                 handleNavigation={handleNavigation}
               />
             }
+          />
+          <Route
+            path="/contact"
+            element={<Contact contactIsVisible={contactIsVisible} />}
           />
         </Routes>
       </main>
