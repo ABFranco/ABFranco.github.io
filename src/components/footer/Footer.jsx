@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <Typography variant="body2">
-      © {new Date().getFullYear()} Antonio Franco
+        © {new Date().getFullYear()} Antonio Franco
       </Typography>
     </footer>
   );
