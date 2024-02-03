@@ -1,0 +1,18 @@
+.navigation-bar .nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.nav-bar-item {
+  margin: 12px;
+}
+
+.navigation-bar span {
+  color: #ffffff;
+}
+
+.nav-bar-item {
+  cursor: pointer;
+}

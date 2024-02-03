@@ -1,17 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { ThemeProvider } from "@mui/material/styles";
+import { BrowserRouter as Router } from "react-router-dom";
+import PageSelector from "./pages/pageSelector/PageSelector.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import theme from "./theme/theme.js";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Antonio! The website is up and working.
-        </p>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Router>
+          <PageSelector />
+          <Footer />
+        </Router>
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
