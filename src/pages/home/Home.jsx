@@ -10,7 +10,7 @@ import "./home.css";
 import { Typography } from "@mui/material";
 import { Fade } from "@mui/material";
 
-const Home = ({homeIsVisible}) => {
+const Home = ({ homeIsVisible }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {

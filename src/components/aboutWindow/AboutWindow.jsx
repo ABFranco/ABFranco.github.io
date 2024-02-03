@@ -37,13 +37,13 @@ const AboutWindow = ({ handleNavigation }) => {
           . Previously, I worked at{" "}
           {websiteLink(
             "Inductive Automation",
-            "https://inductiveautomation.com/"
+            "https://inductiveautomation.com/",
           )}{" "}
           and {websiteLink("CITRIS @ UC Berkeley", "https://citris-uc.org/")}.
           My academic background includes studying{" "}
           {websiteLink(
             "Computer Science in UC Berkeley's",
-            "https://eecs.berkeley.edu/"
+            "https://eecs.berkeley.edu/",
           )}{" "}
           Engineering department.
         </Typography>

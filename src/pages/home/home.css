@@ -30,7 +30,9 @@
   margin: 0.5rem;
   color: #3f3f3f;
   font-size: 2rem;
-  transition: transform 0.15s ease, margin 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    margin 0.15s ease;
 }
 
 .social-button:hover {
@@ -40,7 +42,9 @@
 }
 
 .social-button:not(:hover) {
-  transition: transform 0.15s ease, margin 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    margin 0.15s ease;
 }
 
 .linkedin {
@@ -53,7 +57,7 @@
 
 .strava {
   color: #fc4c02;
-} 
+}
 
 /* Mobile-specific styles */
 @media screen and (max-width: 768px) {
