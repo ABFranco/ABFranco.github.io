@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -12,10 +10,9 @@ import ListItemText from "@mui/material/ListItemText";
 import { useMediaQuery } from "@mui/material";
 import "./navigationBar.css";
 
-const NavigationBar = ({locationPath, handlePageSwitch}) => {
+const NavigationBar = ({handleNavigation}) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width:800px)"); // screen size breakpoint for mobile
-  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -27,18 +24,6 @@ const NavigationBar = ({locationPath, handlePageSwitch}) => {
     { text: "Projects", link: "/projects" },
     { text: "Contact", link: "/contact" },
   ];
-
-  const handleNavigation = (link) => {
-    if (link === locationPath) {
-      return;
-    }
-    handlePageSwitch(locationPath, link);
-
-    setTimeout(() => {
-      // delay for exit transition before navigating to new page
-      navigate(link)
-    }, 500);
-  };
 
   const drawer = (
     <List>

@@ -42,17 +42,16 @@
     
 .dot.red {
   background: #FF6057;
-  /* border: 1px solid #E14640; */
+  cursor: pointer;
 }
   
 .dot.amber {
   background: #FFBD2E;
-  /* border: 1px solid #DFA123; */
+  cursor: pointer;
 }
   
 .dot.green {
   background: #27C93F;
-  /* border: 1px solid #1DAD2B; */
 }
 
 .about-content {

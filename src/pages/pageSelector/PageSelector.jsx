@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 import Home from "../home/Home.jsx";
 import About from "../about/About.jsx";
@@ -11,6 +12,7 @@ import NavigationBar from "../../components/navigationBar/NavigationBar.jsx";
 
 const PageSelector = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [homeIsVisible, setHomeIsVisible] = useState(false);
   const [aboutIsVisible, setAboutIsVisible] = useState(false);
 
@@ -24,6 +26,19 @@ const PageSelector = () => {
         setHomeIsVisible(true);
     }
   }, [location]);
+
+  const handleNavigation = (newPage) => {
+    const currentPage = location?.pathname;
+    if (newPage === currentPage) {
+      return;
+    }
+    handlePageSwitch(currentPage, newPage);
+
+    setTimeout(() => {
+      // delay for exit transition before navigating to new page
+      navigate(newPage);
+    }, 500);
+  };
 
   const handlePageSwitch = (currentPage, newPage) => {
     switch (currentPage) {
@@ -46,14 +61,19 @@ const PageSelector = () => {
   return (
     <>
       <header>
-        <NavigationBar locationPath={location?.pathname} handlePageSwitch={handlePageSwitch} />
+        <NavigationBar handleNavigation={handleNavigation} />
       </header>
       <main>
         <Routes>
           <Route path="/" element={<Home homeIsVisible={homeIsVisible} />} />
           <Route
             path="/about"
-            element={<About aboutIsVisible={aboutIsVisible} />}
+            element={
+              <About
+                aboutIsVisible={aboutIsVisible}
+                handleNavigation={handleNavigation}
+              />
+            }
           />
         </Routes>
       </main>

@@ -3,13 +3,10 @@ import AboutWindow from "../../components/aboutWindow/AboutWindow";
 import "./about.css";
 import { Grow } from "@mui/material";
 
-const About = ({aboutIsVisible}) => {
+const About = ({aboutIsVisible, handleNavigation}) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // if (!aboutIsVisible) {
-    //   setIsVisible(false);
-    // }
     setIsVisible(aboutIsVisible);
   }, [aboutIsVisible]);
 
@@ -20,7 +17,7 @@ const About = ({aboutIsVisible}) => {
       style={{ transformOrigin: '0 0 0' }}
     >
       <div className="about-container">
-        <AboutWindow />
+        <AboutWindow handleNavigation={handleNavigation}/>
       </div>
     </Grow>
     
