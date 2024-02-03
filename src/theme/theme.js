@@ -45,6 +45,11 @@ const theme = createTheme({
       fontSize: "1rem",
     },
   },
+  overrides: {
+    MuiLink: {
+      underline: "none", // or "hover" if you want to remove underline only on hover
+    },
+  },
 });
 
 export default theme;

@@ -10,7 +10,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { useMediaQuery } from "@mui/material";
 import "./navigationBar.css";
 
-const NavigationBar = ({handleNavigation}) => {
+const NavigationBar = ({ handleNavigation }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width:800px)"); // screen size breakpoint for mobile
 
@@ -21,28 +21,52 @@ const NavigationBar = ({handleNavigation}) => {
   const menuItems = [
     { text: "Home", link: "/" },
     { text: "About", link: "/about" },
-    { text: "Projects", link: "/projects" },
     { text: "Contact", link: "/contact" },
+    { text: "Resume", link: "/resume", filePath: "/resume.pdf" },
   ];
+
+  const navigationClick = (link) => {
+    // if (link === "/resume") {
+    //   window.open("../assets/files/resume.pdf", "_blank");
+    // } else {
+    //   handleNavigation(link);
+    // }
+    handleNavigation(link);
+  };
 
   const drawer = (
     <List>
       {menuItems.map((item, index) => (
-        <ListItem key={index} onClick={() => handleNavigation(item.link)}>
-          <ListItemText primary={item.text} />
+        <ListItem key={index}>
+          {item.link === "/resume" ? (
+            <a href={item.filePath} target="_blank" rel="noopener noreferrer">
+              <ListItemText className="nav-bar-item" primary={item.text} />
+            </a>
+          ) : (
+            <ListItemText
+              className="nav-bar-item"
+              primary={item.text}
+              onClick={() => navigationClick(item.link)}
+            />
+          )}
         </ListItem>
       ))}
     </List>
   );
 
   const navigationButtons = menuItems.map((item, index) => (
-    <div
-      // to={item.link}
-      key={index}
-      style={{ textDecoration: "none", color: "inherit" }}
-      onClick={() => handleNavigation(item.link)}
-    >
-      <ListItemText className="nav-bar-item" primary={item.text} />
+    <div key={index} style={{ textDecoration: "none", color: "inherit" }}>
+      {item.link === "/resume" ? (
+        <a href={item.filePath} target="_blank" rel="noopener noreferrer">
+          <ListItemText className="nav-bar-item" primary={item.text} />
+        </a>
+      ) : (
+        <ListItemText
+          className="nav-bar-item"
+          primary={item.text}
+          onClick={() => navigationClick(item.link)}
+        />
+      )}
     </div>
   ));
 

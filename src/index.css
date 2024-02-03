@@ -17,6 +17,9 @@ body {
   /* background-color: #dcdcdd; */
 }
 
+a {
+  text-decoration: none;
+}
 
 /* a:visited {
   color: #46494c;
