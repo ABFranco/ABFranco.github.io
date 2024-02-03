@@ -18,3 +18,9 @@ Preview lint fixes
 ### `npm run lint:fix`
 
 Apply lint fixes
+
+## Deployment
+
+### `npm run deploy`
+
+Run locally on `main` branch to update `gh-pages` branch with the build. Deploys to "https://abfranco.github.io/"
