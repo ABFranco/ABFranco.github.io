@@ -19,7 +19,6 @@ const NavigationBar = ({ handleNavigation }) => {
   };
 
   const menuItems = [
-    { text: "Home", link: "/" },
     { text: "About", link: "/about" },
     { text: "Contact", link: "/contact" },
     { text: "Resume", link: "/resume", filePath: "/resume.pdf" },
