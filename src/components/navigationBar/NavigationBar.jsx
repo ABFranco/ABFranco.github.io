@@ -26,15 +26,10 @@ const NavigationBar = ({ handleNavigation }) => {
   ];
 
   const navigationClick = (link) => {
-    // if (link === "/resume") {
-    //   window.open("../assets/files/resume.pdf", "_blank");
-    // } else {
-    //   handleNavigation(link);
-    // }
     handleNavigation(link);
   };
 
-  const drawer = (
+  const mobileDrawer = (
     <List>
       {menuItems.map((item, index) => (
         <ListItem key={index}>
@@ -72,8 +67,18 @@ const NavigationBar = ({ handleNavigation }) => {
 
   return (
     <div className="navigation-bar">
-      <AppBar position="fixed">
-        <Toolbar className="nav-bar">
+      <AppBar className="nav-bar" position="fixed">
+        <div
+          className="nav-bar-name"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <ListItemText
+            className="nav-bar-item"
+            primary={"Antonio Franco"}
+            onClick={() => navigationClick("/")}
+          />
+        </div>
+        <Toolbar style={{ padding: 0, minHeight: "40px" }}>
           {isMobile && (
             <IconButton
               color="inherit"
@@ -98,7 +103,7 @@ const NavigationBar = ({ handleNavigation }) => {
             open={mobileOpen}
             onClose={handleDrawerToggle}
           >
-            {drawer}
+            {mobileDrawer}
           </Drawer>
         )}
       </nav>

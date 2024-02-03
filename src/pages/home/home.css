@@ -55,14 +55,6 @@
   color: #fc4c02;
 } 
 
-.nav-bar {
-  margin-left: auto;
-  justify-content: 'flex-end';
-}
-.nav-bar-item {
-  margin: 12px;
-}
-
 /* Mobile-specific styles */
 @media screen and (max-width: 768px) {
   .home-top-content {
