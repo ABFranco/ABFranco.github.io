@@ -22,9 +22,15 @@ const theme = createTheme({
     },
     h1: {
       fontSize: "4rem",
+      "@media (max-width:800px)": {
+        fontSize: "3rem",
+      },
     },
     h2: {
       fontSize: "3rem",
+      "@media (max-width:800px)": {
+        fontSize: "2.5rem",
+      },
     },
     h3: {
       fontSize: "2rem",
@@ -40,9 +46,30 @@ const theme = createTheme({
     },
     body1: {
       fontSize: "1.25rem",
+      "@media (max-width:800px)": {
+        fontSize: "1rem",
+      },
     },
     body2: {
       fontSize: "1rem",
+      "@media (max-width:800px)": {
+        fontSize: "0.75rem",
+      },
+    },
+  },
+  overrides: {
+    MuiTypography: {
+      h1: {
+        "@media (max-width: 800px)": {
+          fontSize: "2rem", // Adjust h1 font size for screens with width <= 800px
+        },
+      },
+      h2: {
+        "@media (max-width: 800px)": {
+          fontSize: "1.5rem", // Adjust h2 font size for screens with width <= 800px
+        },
+      },
+      // Repeat the pattern for other typography variants as needed
     },
   },
 });

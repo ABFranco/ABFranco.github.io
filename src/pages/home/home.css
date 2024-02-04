@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
   height: 75vh;
 }
 
@@ -12,7 +13,10 @@
   justify-content: center;
   align-items: center;
   gap: 5vw;
-  margin: 5vh 5vw;
+}
+
+.home-text {
+  margin: 20px;
 }
 
 #self-pic {
