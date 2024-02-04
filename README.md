@@ -19,6 +19,10 @@ Preview lint fixes
 
 Apply lint fixes
 
+### `npx eslint .`
+
+Preview eslint fixes
+
 ## Deployment
 
 ### `npm run deploy`

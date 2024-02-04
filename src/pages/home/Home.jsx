@@ -9,14 +9,16 @@ import SelfPic from "./../../assets/images/self_pic.jpg";
 import "./home.css";
 import { Typography } from "@mui/material";
 import { Fade } from "@mui/material";
+import PropTypes from "prop-types";
 
 const Home = ({ homeIsVisible }) => {
+  Home.propTypes = {
+    homeIsVisible: PropTypes.bool,
+  };
+
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // if (!homeIsVisible) {
-    //   setIsVisible(false);
-    // }
     setIsVisible(homeIsVisible);
   }, [homeIsVisible]);
 
@@ -25,7 +27,7 @@ const Home = ({ homeIsVisible }) => {
       <div className="home-container">
         <div className="home-top-content">
           <div className="home-text">
-            <Typography variant="h1">Hello! I'm Antonio. 👋🏽</Typography>
+            <Typography variant="h1">Hello! I&apos;m Antonio. 👋🏽</Typography>
             <Typography variant="h3">Full Stack Software Engineer</Typography>
           </div>
           <div className="home-img">

@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
 import { Fade } from "@mui/material";
 import "./contact.css";
+import PropTypes from "prop-types";
 
 const Contact = ({ contactIsVisible }) => {
+  Contact.propTypes = {
+    contactIsVisible: PropTypes.bool,
+  };
+
   const [isVisible, setIsVisible] = useState(true);
   const email = "abfranco@berkeley.edu";
 

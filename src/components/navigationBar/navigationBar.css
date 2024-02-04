@@ -13,6 +13,7 @@
   color: #ffffff;
 }
 
-.nav-bar-item {
+.nav-bar-item span {
   cursor: pointer;
+  font-size: 1.25rem;
 }

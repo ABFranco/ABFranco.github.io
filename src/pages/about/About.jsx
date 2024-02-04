@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import AboutWindow from "../../components/aboutWindow/AboutWindow";
 import "./about.css";
 import { Grow } from "@mui/material";
+import PropTypes from "prop-types";
 
 const About = ({ aboutIsVisible, handleNavigation }) => {
+  About.propTypes = {
+    handleNavigation: PropTypes.func,
+    aboutIsVisible: PropTypes.bool,
+  };
+
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {

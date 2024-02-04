@@ -1,8 +1,13 @@
 import React from "react";
 import "./aboutWindow.css";
 import { Typography, Link } from "@mui/material";
+import PropTypes from "prop-types";
 
 const AboutWindow = ({ handleNavigation }) => {
+  AboutWindow.propTypes = {
+    handleNavigation: PropTypes.func,
+  };
+
   const websiteLink = (text, url) => (
     <Link
       href={url}
@@ -55,8 +60,9 @@ const AboutWindow = ({ handleNavigation }) => {
           the ever-evolving landscape of the tech industry.
         </Typography>
         <Typography variant="body1">
-          On my free time, I love to run. I'm often training for an upcoming
-          marathon, or looking for the next running shoe I should buy! 😅
+          On my free time, I love to run. I&apos;m often training for an
+          upcoming marathon, or looking for the next running shoe I should buy!
+          😅
         </Typography>
       </div>
     </div>
