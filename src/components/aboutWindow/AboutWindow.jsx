@@ -1,8 +1,13 @@
 import React from "react";
 import "./aboutWindow.css";
 import { Typography, Link } from "@mui/material";
+import PropTypes from "prop-types";
 
 const AboutWindow = ({ handleNavigation }) => {
+  AboutWindow.propTypes = {
+    handleNavigation: PropTypes.func,
+  };
+
   const websiteLink = (text, url) => (
     <Link
       href={url}
