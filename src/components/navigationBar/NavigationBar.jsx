@@ -9,8 +9,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { useMediaQuery } from "@mui/material";
 import "./navigationBar.css";
+import PropTypes from "prop-types";
 
 const NavigationBar = ({ handleNavigation }) => {
+  NavigationBar.propTypes = {
+    handleNavigation: PropTypes.func,
+  };
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width:800px)"); // screen size breakpoint for mobile
 
