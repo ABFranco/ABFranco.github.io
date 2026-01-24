@@ -38,8 +38,14 @@ const AboutWindow = ({ handleNavigation }) => {
       <div className="about-content">
         <Typography variant="body1">
           My name is Antonio, and I am currently a Software Engineer at{" "}
-          {websiteLink("Hall Capital Partners", "https://www.hallcapital.com/")}
-          . Previously, I worked at{" "}
+          {websiteLink("Atlassian", "https://www.atlassian.com/")}, building new
+          features for the{" "}
+          {websiteLink(
+            "Confluence Cloud",
+            "https://www.atlassian.com/software/confluence",
+          )}{" "}
+          product. Previously, I worked at{" "}
+          {websiteLink("Hall Capital Partners", "https://pathstone.com/")},{" "}
           {websiteLink(
             "Inductive Automation",
             "https://inductiveautomation.com/",
