@@ -4,6 +4,7 @@ import {
   faLinkedin,
   faGithub,
   faStrava,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import SelfPic from "./../../assets/images/self_pic.jpg";
 import "./home.css";
@@ -59,6 +60,14 @@ const Home = ({ homeIsVisible }) => {
             className="social-button strava"
           >
             <FontAwesomeIcon icon={faStrava} />
+          </a>
+          <a
+            href="https://www.instagram.com/runwithantonio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-button instagram"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
       </div>
